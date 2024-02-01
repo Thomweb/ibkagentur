@@ -1,0 +1,76 @@
+##############################################################
+### Plugins fremde Extensions                              ###
+##############################################################
+
+plugin.tx_kesearch_pi1 {
+    view {
+        templateRootPath = EXT:ibkagentur/Resources/Private/Ke_search/Templates/
+        templateRootPaths {
+            10 = EXT:ibkagentur/Resources/Private/Ke_search/Templates/
+        }
+    }
+}
+
+plugin.tx_kesearch_pi2 {
+    view {
+        partialRootPaths {
+            10 = EXT:ibkagentur/Resources/Private/Ke_search/Partials/
+        }
+    }
+}
+
+plugin.tx_gkhrssimport_pi1 {
+    templateFile = EXT:ibkagentur/Resources/Private/gkh_rss_import/Templates/RssImport.html
+}
+
+##############################################################
+### Weitere Sitemap für Blog                               ###
+##############################################################
+
+plugin.tx_seo {
+    config {
+        xmlSitemap {
+            sitemaps {
+                pages {
+                    config {
+                        additionalWhere = AND no_index = 0
+                        excludedDoktypes = 3, 4, 6, 7, 199, 254, 255, 137, 138
+                        additionalWhere = AND (no_index = 0 OR no_follow = 0)
+                        #rootPage = <optionally specify a different root page. (default: rootPageId from site configuration)>
+                        #excludePagesRecursive = <comma-separated list of page IDs>
+                    }
+                }
+            }
+        }
+    }
+}
+
+plugin.tx_seo {
+    config {
+        xmlSitemap {
+            sitemaps {
+                ibkblog {
+                    provider = TYPO3\CMS\Seo\XmlSitemap\RecordsXmlSitemapDataProvider
+                    config {
+                        table = tx_ibkblog_domain_model_blog
+                        sortField = tstamp
+                        lastModifiedField = tstamp
+                        recursive = 0
+                        pid = 49 #Speicherort der Beiträge
+                        url {
+                            pageId = 75 #PageID der Detailseite
+                            fieldToParameterMap {
+                                uid = tx_ibkblog_blog[blog]
+                            }
+                            additionalGetParameters {
+                                tx_ibkblog_blog.controller = Blog
+                                tx_ibkblog_blog.action = show
+                            }
+                            useCacheHash = 1
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

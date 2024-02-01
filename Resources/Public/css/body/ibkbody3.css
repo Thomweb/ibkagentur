@@ -1,0 +1,11 @@
+/* Bild als Hintergrund */
+
+@media(min-width:801px) {
+    body {
+        background: url(https://www.agentur-ibk.de/fileadmin/img/background/TYPO3-Schulung-TypoScript-Setup-Templates-DSC00760-1920x1200-Lehrgang-Koeln.jpg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;	
+        background-size: cover;  
+        background-position: center;
+    }
+}

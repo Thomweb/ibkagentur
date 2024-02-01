@@ -1,0 +1,73 @@
+
+#form_kesearch_top {
+    background-color: rgba(221, 221, 221, .7);
+    padding: 10px 15px 10px 15px;
+    float: left;
+    width: 830px;
+    max-width: 100%;
+}
+
+
+@media(max-width:767px) {
+    .ke-top-div-input {
+        width: 100%;
+        clear: both;
+    }
+    .ke-top-div-button {
+        width: 100%;
+        clear: both;
+    }
+}
+
+@media(min-width:768px) {
+    .ke-top-div-input {
+        width: 70%;
+        float: left;
+    }
+    .ke-top-div-button {
+        width: 30%;
+        float: right;
+    }
+}
+
+#ke_search_sword_box, #ke_search_sword {
+    border: 3px #729ebd solid;
+    height: 38px;
+    width: 100%;
+    padding: 5px;
+    margin: 0px;
+    display: block;
+}
+
+/* Eigener Code */
+
+.button_search {
+    background: #729ebd;
+    height: 38px;
+    width: 100%;
+    min-width: 80px;
+    float: right;
+    border: none;
+    font-size: 14px;
+    padding: 0;
+    margin: 0;
+}
+
+.button_search:hover {
+    background: #a4c2ed;
+    color: #275ba4;
+    text-decoration: none;
+}
+
+/* Search Box ausblenden */
+.ke-search-top,
+#search-top-out {
+    display: none;
+}
+
+
+
+
+
+
+

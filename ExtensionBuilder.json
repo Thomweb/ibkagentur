@@ -1,0 +1,39 @@
+{
+    "modules": [],
+    "properties": {
+        "backendModules": [],
+        "description": "",
+        "emConf": {
+            "category": "plugin",
+            "custom_category": "",
+            "dependsOn": "typo3 => 8.7.0-8.7.99\n",
+            "disableLocalization": false,
+            "disableVersioning": false,
+            "skipGenerateDocumentationTemplate": false,
+            "sourceLanguage": "de",
+            "state": "alpha",
+            "targetVersion": "8.7.0-8.7.99",
+            "version": "8.7.1"
+        },
+        "extensionKey": "ibkagentur",
+        "name": "IBK Provider Extension",
+        "originalExtensionKey": "",
+        "originalVendorName": "",
+        "persons": [
+            {
+                "company": "ibk",
+                "email": "thom@thomweb.de",
+                "name": "Thomas Berscheid",
+                "role": "Developer"
+            }
+        ],
+        "plugins": [],
+        "vendorName": "Ibk"
+    },
+    "wires": [],
+    "log": {
+        "last_modified": "2018-07-07 01:28",
+        "extension_builder_version": "8.7.0",
+        "be_user": " (1)"
+    }
+}

@@ -1,0 +1,31 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:ce="http://typo3.org/ns/TYPO3/CMS/FluidStyledContent/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:if condition="{gallery.rows}">
+    <f:for each="{gallery.rows}" as="row">
+        <f:for each="{row.columns}" as="column">
+            <f:if condition="{column.media}">
+                <div class="div-button-popup">
+                    <f:link.typolink
+                        parameter="{data.header_link}"
+                        title="{data.header}"
+                        class="button-layer">
+                        <f:format.raw>{data.bodytext}</f:format.raw>
+                    </f:link.typolink>
+
+                </div>
+                <div class="div-button-bild">
+                    <f:render partial="Media/Type" arguments="{file: column.media, dimensions: column.dimensions, data: data, settings: settings}" />
+                </div>
+                <div class="div-button-text">
+                    <f:link.typolink
+                        parameter="{data.header_link}"
+                        title="{data.header}"
+                        class="button button-navigation">
+                        <f:format.raw>{data.subheader}</f:format.raw>
+                    </f:link.typolink>
+
+                </div>
+            </f:if>
+        </f:for>
+    </f:for>
+</f:if>
+</html>

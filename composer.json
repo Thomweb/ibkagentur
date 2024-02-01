@@ -1,0 +1,38 @@
+{
+    "name": "ibk/ibkagentur",
+    "type": "typo3-cms-extension",
+    "description": "",
+    "authors": [
+        {
+            "name": "Thomas Berscheid",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "typo3/cms-core": "^12.4.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Ibk\\Ibkagentur\\": "Classes"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Ibk\\Ibkagentur\\Tests\\": "Tests",
+            "Ibk\\Ibkagentur\\": "Classes"
+        },
+        "classmap": [
+            "Classes"
+        ]
+    },
+    "extra": {
+        "typo3/cms": {
+            "extension-key": "ibkagentur",
+            "web-dir": ".Build/web"
+        }
+    },
+    "replace": {
+        "ibk/ibkagentur": "self.version",
+        "typo3-ter/ibkagentur": "self.version"
+    }
+}

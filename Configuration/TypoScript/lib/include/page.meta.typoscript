@@ -1,0 +1,61 @@
+########################################
+### Fluid Template PAGE META         ###
+########################################
+
+page {
+    ## HEADER Data
+    headerData {
+
+        80 = TEXT
+        80 {
+            stdWrap.typolink {
+                parameter.stdWrap {
+                    cObject = IMG_RESOURCE
+                    cObject {
+                        file {
+                            import.data = levelmedia:-1, slide
+                            treatIdAsReference = 1
+                            import.listNum = 0
+                        }
+                    }
+                }
+                returnLast = url
+                forceAbsoluteUrl = 1
+            }
+            required = 1
+        }
+        80.wrap (
+      <meta name="thumbnail" content="|">
+        )
+
+        90 = TEXT
+        90 {
+            stdWrap.typolink {
+                parameter.stdWrap {
+                    cObject = IMG_RESOURCE
+                    cObject {
+                        file {
+                            import.data = levelmedia:-1, slide
+                            treatIdAsReference = 1
+                            import.listNum = 0
+                        }
+                    }
+                }
+                returnLast = url
+                forceAbsoluteUrl = 1
+            }
+            required = 1
+        }
+        90.wrap (
+      <!--
+      <PageMap>
+      <DataObject type="thumbnail">
+      <Attribute name="src" value="|" />
+      <Attribute name="width" value="200" />
+      <Attribute name="height" value="150" />
+      </DataObject>
+      </PageMap>
+      -->
+        )
+    }
+}

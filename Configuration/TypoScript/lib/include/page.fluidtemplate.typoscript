@@ -1,0 +1,206 @@
+########################################
+### Fluid Template PAGE Object       ###
+########################################
+
+page.10 = FLUIDTEMPLATE
+page.10 {
+    format = html
+    file = EXT:ibkagentur/Resources/Private/Templates/Page.html
+    partialRootPath = EXT:ibkagentur/Resources/Private/Partials/
+    layoutRootPath = EXT:ibkagentur/Resources/Private/Layouts/
+    variables {
+
+        page_title = TEXT
+        page_title.field = seo_title // subtitle // title
+
+        page_content < styles.content.get
+        page_content.select.where = colPos = 1
+
+        bilder_buttons < styles.content.get
+        bilder_buttons.select.where = colPos = 2
+
+        page_bottom < styles.content.get
+        page_bottom.select.where = colPos = 4
+
+        ## Accordion
+        page_accordion = CONTENT
+        page_accordion {
+            table = tt_content
+            select {
+                where = colPos = 93
+                orderBy = sorting
+            }
+            renderObj = COA
+            renderObj {
+                100 = TEXT
+                100 {
+                    field = header
+                    required = 1
+                    wrap = <h3>|</h3>
+                }
+
+                150 = TEXT
+                150.wrap = <div>
+
+                200 = FILES
+                200 {
+                    references {
+                        table = tt_content
+                        uid.data = uid
+                        #fieldName = image
+                        fieldName = assets
+                        required = 1
+                    }
+                    renderObj = IMAGE
+                    renderObj {
+                        #file.import.data = file:current:publicUrl
+                        file.import.data = file:current:originalUid
+                        #textPos = 17
+                        titleText.data = file:current:title
+                        altText.data = file:current:alternative
+                        params = class="img-accordion"
+
+                        fieldRequired = header_link
+                        stdWrap.typolink.parameter.field = header_link
+                        stdWrap.wrap = <div class="div-accordion-bild">|</div>
+                    }
+                }
+
+                300 = TEXT
+                300.field = bodytext
+                300.required = 1
+                300.wrap = |
+
+                300 = TEXT
+                300.field = bodytext
+                300.required = 1
+
+                320 = TEXT
+                320 {
+                    value.field = header
+                    stdWrap {
+                        fieldRequired = header_link
+                        typolink {
+                            parameter.field = header_link
+                            title.field = header
+                            ATagParams = class="button"
+                        }
+                    }
+                    value.field = subheader // header
+                    stdWrap.typolink.parameter.field = header_link // header
+                    stdWrap.wrap = <div class="button-accordion">|</div>
+                }
+
+                350 = TEXT
+                350.wrap = </div>
+            }
+        }
+
+
+        ## FAQ
+        faq_content = CONTENT
+        faq_content {
+            table = tt_content
+            select {
+                where = colPos = 6
+                orderBy = sorting
+            }
+            renderObj = COA
+            renderObj {
+
+                10 = TEXT
+                10.wrap = <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" class="faqlist">
+
+                20 = TEXT
+                20 {
+                    field = header
+                    required = 1
+                    wrap = <h3 itemprop="name">|</h3>
+                }
+
+                30 = TEXT
+                30.wrap = <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+
+                40 = FILES
+                40 {
+                    references {
+                        table = tt_content
+                        uid.data = uid
+                        fieldName = assets
+                        required = 1
+                    }
+                    renderObj = IMAGE
+                    renderObj {
+                        file.import.data = file:current:originalUid
+                        titleText.data = file:current:title
+                        altText.data = file:current:alternative
+                        params = class="img-faq" itemprop="image"
+
+
+                        layoutKey = srcset
+                        layout {
+                            srcset {
+                                element = <img src="###SRC###" srcset="###SOURCECOLLECTION###" width="###WIDTH###" height="###HEIGHT###" sizes="(min-width: 992px) 594px, (max-width: 991px) 466px, (max-width:768px) 354px, (max-width:576px) 576px, 100vw" ###PARAMS### ###ALTPARAMS### ###SELFCLOSINGTAGSLASH###>
+                                source = |*|###SRC### ###SRCSETCANDIDATE###, |*|###SRC### ###SRCSETCANDIDATE###
+                            }
+                        }
+
+                        sourceCollection {
+                            small {
+                                width = 576
+                                srcsetCandidate = 576w,
+                                mediaQuery = (max-device-width: 575px)
+                                dataKey = small
+                            }
+
+                            medium {
+                                width = 354
+                                srcsetCandidate = 354w,
+                                mediaQuery = (min-device-width: 576px) AND (max-device-width: 767px)
+                                dataKey = medium
+                            }
+
+                            desktop {
+                                width = 466
+                                srcsetCandidate = 466w,
+                                mediaQuery = (min-device-width: 768px) AND (max-device-width: 991px)
+                                dataKey = desktop
+                            }
+
+                            big {
+                                width = 594
+                                mediaQuery = (min-device-width: 992px)
+                                srcsetCandidate = 594w
+                                dataKey = big
+                            }
+                        }
+
+
+                        fieldRequired = header_link
+                        stdWrap.typolink.parameter.field = header_link
+                        stdWrap.wrap = <div class="faq-bild">|</div>
+                    }
+                }
+
+                50 = TEXT
+                50.field = bodytext
+                50.required = 1
+                50.wrap = <div class="faq-text" itemprop="text">|</div>
+
+                60 = TEXT
+                60 {
+                    field = tstamp
+                    date = d.m.Y
+                    wrap = <meta itemprop="datePublished" content="|">
+                }
+
+                70 = TEXT
+                70.wrap = </div>
+
+                80 = TEXT
+                80.wrap = </div>
+            }
+        }
+    }
+}
+

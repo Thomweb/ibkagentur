@@ -1,0 +1,11 @@
+/* Bild als Hintergrund */
+
+@media(min-width:801px) {
+    body {
+        background: url(https://www.agentur-ibk.de/fileadmin/img/background/TYPO3-Wordpress-Bootstrap-Webseiten-SEO-DSC01754-1920x1200-Agentur-Koeln.jpg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;	
+        background-size: cover;  
+        background-position: center;
+    }
+}

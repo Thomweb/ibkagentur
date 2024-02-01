@@ -1,0 +1,61 @@
+
+page {
+  10 {
+    dataProcessing {
+
+      ## Header Navigation
+      10 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+      10 {
+        levels = 3
+        as = headerMenu
+        expandAll = 1
+        includeSpacer = 1
+        excludeUidList = 6, 74, 25, 26, 27, 28, 29, 30, 31, 63, 87, 93, 265, 270, 34, 34, 35, 36, 37, 38, 39, 61, 62, 44
+        titleField = nav_title // title
+      }
+
+    	## Breadcrumb Navigation
+      20 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+      20 {
+        special = rootline
+        as = breadMenu
+        titleField = nav_title // title
+      }
+      21 = Ibk\Ibkagentur\Dataprocessor\Breadcrumb
+      21 {
+        addToMenus = navBreadcrumb
+      }
+
+      ## Footer Navigation
+      30 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+      30 {
+        levels = 1
+        as = footerMenu
+        expandAll = 1
+        excludeUidList = 6, 74
+        titleField = seo_title // subtitle // nav_title // title
+      }
+
+    	## Banner Navigation
+      40 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+      40 {
+        special = list
+        #special.value = 75, 72, 71, 277, 44
+        special.value = 72, 71, 44
+        as = bannerMenu
+        titleField = nav_title // title
+      }
+
+    	## Bottom Navigation
+      50 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+      50 {
+        special = list
+        special.value = 72, 71, 277
+        as = bottomMenu
+        titleField = nav_title // title
+      }
+
+
+    }
+  }
+}

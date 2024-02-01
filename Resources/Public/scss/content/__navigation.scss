@@ -1,0 +1,365 @@
+// Bootstrap 4 Mega Menu
+
+.has-megamenu {
+	position: static;
+}
+
+.megamenu,
+.dropdown-menu.megamenu {
+  margin-top: 0px;
+  @media (max-width: 767px) {
+    width: calc(100% + 20px);
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+}
+
+.nav-container {
+  padding: 0;
+}
+
+#navbar > ul > li.nav-item.dropdown.has-megamenu > div {
+  @include fn-border-radius(0);
+  background-color: #eee;
+  border: 5px $blau-leicht solid;
+  padding: 0;
+  box-shadow: 0px 30px 30px -15px #333;
+}
+
+#navbar > ul > li.nav-item.dropdown.has-megamenu > div .row {
+  margin: 0;
+}
+// Alle Elemente ab der 2. Ebene
+.div-nav {
+  padding: 5px;
+  color: #333;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+}
+
+.div-nav:hover {
+  background-color: $blau-leicht; 
+  color: #111;
+  transition: all 0.8s;
+  -webkit-transition: all 0.8s;
+}
+
+// Bootstrap Menu Anpassungen
+
+nav.navbar {
+  background-color: $blau-stark;
+  border: none;
+  margin-top: 0px;
+  margin-bottom: 0;
+  min-height: 40px;
+  padding-left: 15px;
+  padding-right: 15px;
+  @include fn-border-radius(0 0 0 0);
+  @include fn-linear-gradient($blau-stark, $blau-leicht);
+}
+ul.nav.navbar-nav > li > a {
+  color: $blau-hover;
+  padding: 12px 8px;
+}
+
+ul.nav.navbar-nav > li > a:hover {
+  color: #ccc;
+  @include fn-linear-gradient($blau-stark, $blau-hover);
+}
+ul.dropdown-menu {
+  padding: 0;
+}
+#navbar.navbar-collapse.collapse > ul.nav.navbar-nav > li.dropdown > ul.dropdown-menu {
+  background-color: $blau-leicht;
+}
+.dropdown-menu > .active > a:focus, .dropdown-menu > .active > a {
+  background-color: $blau-stark;
+}
+
+.dropdown-menu {
+  border: none;  
+}
+
+#navbar.navbar-collapse.collapse > ul.nav.navbar-nav > li.active > a {
+  @include fn-linear-gradient($blau-stark, $blau-leicht);
+  color: #ddd;
+}
+#navbar.navbar-collapse.collapse > ul.nav.navbar-nav > li.dropdown.open > a.dropdown-toggle {
+  background-color: $blau-leicht;
+}
+
+.dropdown-menu > .active > a:hover {
+  background-color: $blau-hover;
+  color: $blau-stark;
+}
+.dropdown-menu > li > a:hover {
+  color: $blau-stark;
+  background-color: $blau-hover;
+}
+
+div#navbar.navbar-collapse.collapse > ul.nav.navbar-nav > li.dropdown.active > a.dropdown-toggle {
+  color: #eee;
+}
+
+// Bootstrap 5 Mega Menu 3. Ebene
+
+.col-megamenu {
+  ul {
+    padding-left: 0;
+    li {
+      list-style-type: none;
+
+      a.link-level3 {
+        color: $blau-stark;
+        font-size: 14px;
+        line-height: 22px;
+        transition: all ease 0.5s;
+      }
+      a.link-level3:hover {
+        color: $preformat-hell;
+        transition: all ease 0.5s;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+
+.nav-level3 {
+  padding: 0px 1px 0px 1px;
+  font-size: 14px;
+}
+
+// Banner Navigation
+.navigation-banner span {
+  float: left;
+}
+.navigation-banner .nav-search a {
+  float: right;
+}
+
+
+// Breadcrumb Navigation
+.navigation-breadcrumb {
+  font-size: 14px;
+}
+span.bread_link_small,
+a.bread_link_small  {
+  font-size: 14px;  
+  line-height: 40px;
+  padding: 10px 5px;
+  transition: all ease 0.3s;
+
+  &.bread_link_img {
+    font-size: 24px;
+    padding: 10px;
+  }
+
+}
+
+span.bread_link_small  {
+  color: #333;
+}
+a.bread_link_small  {
+  //color: $blau-stark;
+  color: $blau-dark;
+}
+a.bread_link_small:hover {
+  color: #222;
+  text-decoration: none;
+  background-color: rgba(39, 91, 164, 0.3);
+  transition: all ease 0.3s;
+}
+
+.col-breadcrumb {
+  min-height: 40px;
+  position: relative;
+}
+
+.bread-navigation-open,
+.bread-navigation-close {
+  padding: 10px 0 10px 30px;
+  position: relative;
+  i.fas {
+    position: absolute;
+    font-size: 24px;
+    left: 0;
+    top: 8px;
+  }
+}
+
+@media (max-width: 767px) {
+  .bread-navigation-open {
+    display: block;
+  }
+  .bread-navigation-close {
+    display: none;
+  }
+
+  #breadcrumb {
+    display: none;
+    background: #efefef;
+    border: none;
+    border-left: 12px #ddd solid;
+    border-bottom: 3px #ddd solid;
+    padding: 5px 5px 5px 15px;
+    z-index: 1001;
+    position: absolute;
+    top: 40px;
+    left: 0px;
+    > span {
+      clear: both;
+      float: left;
+    }
+  }
+}
+@media (min-width: 768px) {
+  .bread-navigation-open,
+  .bread-navigation-close {
+    display: none !important;
+  }
+  #breadcrumb {
+    border: none;
+    display: block !important;
+  }
+
+}
+
+
+.ibkfooter {
+  color: $blau-stark;
+}
+
+// Search on top of page
+//.img-search {
+  //font-size: 24px;
+  //margin-top: -4px;
+  //transition: all ease 0.3s;
+//}
+
+//.img-search-active {
+//  background-color: rgba(220, 220, 220, 1.0);
+//}
+.img-search:hover {
+  text-decoration: none;
+  transition: all ease 0.5s;
+}
+
+
+// Seitlicher Reiter für Mail, Kontakt, Cookies und weitere Elemente
+@media (max-width: 767px) {
+	#reiter {
+		display: none;
+	}
+}
+@media (min-width: 768px) {
+	#reiter {
+		display: block;
+	}
+}
+
+#reiter {
+	position: fixed;
+	z-index: 1001;
+	left: 0;
+	top: 30vh;
+	width: 40px;
+    border-top: 1px #eee solid;
+
+    a.reiter-link {
+      color: $blau-stark;
+      transition: all ease 0.5s;
+    }
+
+  ul {
+    list-style-type: none;
+    margin-left: -32px;
+    width: 40px;
+
+  }
+
+  > ul {
+    > li {
+      position: relative;
+      padding: 5px 10px;
+      height: 40px;
+      width: 40px;
+      background-color: rgba(114, 158, 189, 0.7);
+      border-right: 1px #eee solid;
+      border-bottom: 1px #eee solid;
+      color: $blau-stark;
+      font-size: 1.2rem;
+    }
+
+    > li > ul > li {
+      font-size: 0px;
+      height: 40px;
+      width: 0;
+      position: absolute;
+      top: -1px;
+      margin-left: 30px;
+      transition: all 0.7s;
+    }
+
+    > li:hover {
+      cursor: help;
+      border-right: none;
+      background-color: $blau-stark;
+      color: #fff; 
+      transition: all ease 0.7s;
+    }
+
+    > li:hover ul > li {
+      cursor: default;
+      padding: 8px;
+      z-index: 1000;
+      min-height: 41px;
+      border: 1px #eee solid;
+      border-left: none;
+      background-color: $blau-stark;
+      width: 400px;
+      transition: all ease 1s;
+    }
+
+    > li:hover ul > li > span {
+      font-size: 1rem;
+      transition-delay: 1s;
+      color: #fff;
+    }
+
+    > li:hover > a,
+    > li > a.reiter-link:hover {
+      color: #fff;
+      transition: all ease 0.5s;
+      text-decoration: none;
+    }
+  }
+}
+
+// Navigation in Fliesstext (Section Menu)
+
+#main {
+  .frame-type-menu_section {
+    > ul {
+      padding-left: 0;
+      
+      > li {
+        list-style-type: none;
+        margin-top: -10px;
+      }
+      
+      > li > a {
+        display: none;
+      }
+      
+      > li > ul {
+        padding-left: 2em;
+      }
+
+      > li > ul > li {
+        color: $blau-hover; 
+        list-style-type: square;
+      }
+    }
+  }
+}

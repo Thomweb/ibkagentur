@@ -1,0 +1,9 @@
+#######################################################
+### SETUP zum Import neues Bild für Header          ###
+### Ergänzung CSS: Hintergrund Kapitel SEO          ###
+#######################################################
+
+#page.includeCSS {
+#    css995 = EXT:ibkagentur/Resources/Public/css/body/ibkbody8.css
+#    css995.media = all
+#}

@@ -1,0 +1,31 @@
+########################################
+### Header and Google PageMap Images ###
+########################################
+
+lib.headerimage = IMAGE
+lib.headerimage {
+    file {
+        import.data = levelmedia:-1, slide
+        treatIdAsReference = 1
+        import.listNum = 0
+    }
+}
+
+lib.googleimageSrc = TEXT
+lib.googleimageSrc {
+    stdWrap.typolink {
+        parameter.stdWrap {
+            cObject = IMG_RESOURCE
+            cObject {
+                file {
+                    import.data = levelmedia:-1, slide
+                    treatIdAsReference = 1
+                    import.listNum = 0
+                }
+            }
+        }
+        returnLast = url
+        forceAbsoluteUrl = 1
+    }
+    required = 1
+}

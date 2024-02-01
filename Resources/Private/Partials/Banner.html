@@ -1,0 +1,40 @@
+
+<div class="row banner">
+  <div class="col-12">
+    <span>Agentur IBK</span>
+  </div>
+</div>
+
+<div class="row navigation-banner">
+  <div class="col-12 col-sm-12">
+
+    <f:for each="{bannerMenu}" as="bannerMenuItem" iteration="bannerIteration">
+      <span>
+
+        <f:if condition="{bannerMenuItem.data.uid} != 44">
+            <f:link.page
+                pageUid="{bannerMenuItem.data.uid}"
+                title="{bannerMenuItem.data.seo_title}"
+                class="bread_link_small">
+              {bannerMenuItem.data.title}
+            </f:link.page>
+        </f:if>
+
+      </span>
+    </f:for>
+
+    <f:if condition="{uid} != 44">
+        <span>
+            <a class="bread_link_small bread_link_img" id="search-top-in" title="Suchergebnisse ✔ TYPO3 Facettierte Suche auf der Webseite" href="#">
+            &#128269;
+            </a>
+            <a class="bread_link_small bread_link_img" id="search-top-out" title="Suchergebnisse ✔ TYPO3 Facettierte Suche auf der Webseite" href="#">
+              &#128270;
+            </a>
+
+        </span>
+    </f:if>
+  </div>
+  
+</div>
+

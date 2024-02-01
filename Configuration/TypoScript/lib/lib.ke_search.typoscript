@@ -1,0 +1,23 @@
+########################################
+# searchbox pures HTML
+########################################
+
+lib.ke_search_boot = TEXT
+lib.ke_search_boot.value (
+    <form method="get" id="form_kesearch_pi1" name="form_kesearch_pi1"  action="/index.php?id=44">    
+	<input type="hidden" name="id" value="44" />
+	<div class="ke-div-input"><input type="text" id="ke_search_sword_box" name="tx_kesearch_pi1[sword]" value="" placeholder="Suchbegriff" /></div>
+	<div class="ke-div-button"><input class="button button_search" type="submit" value="Finden" /></div>
+    </form>
+)
+
+lib.ke_search_top = TEXT
+lib.ke_search_top.value (
+    <form method="get" id="form_kesearch_top" name="form_kesearch_pi1"  action="/index.php?id=44">    
+	<input type="hidden" name="id" value="44" />
+	<div class="ke-top-div-input"><input type="text" id="ke_search_sword_box" name="tx_kesearch_pi1[sword]" value="" placeholder="Geben Sie hier Ihren Suchbegriff ein!" /></div>
+	<div class="ke-top-div-button"><input class="button button_search" type="submit" value="Finden" /></div>
+    </form>
+)
+
+

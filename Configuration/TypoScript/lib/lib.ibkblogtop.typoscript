@@ -1,0 +1,11 @@
+lib.ibkblogtop = USER
+lib.ibkblogtop {
+    userFunc = TYPO3\CMS\Extbase\Core\Bootstrap->run
+    extensionName = Ibkblog
+    pluginName = Pagelist
+    vendorName = Ibk
+
+    settings < plugin.tx_ibkblog.settings
+    persistence < plugin.tx_ibkblog.persistence
+    view < plugin.tx_ibkblog.view
+}

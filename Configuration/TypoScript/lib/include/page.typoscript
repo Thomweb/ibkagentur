@@ -1,0 +1,13 @@
+########################################
+### PAGE TypoScript                  ###
+########################################
+
+page = PAGE
+page {
+    typeNum = 0
+    config.doctype = html5
+    bodyTag = <body>
+    shortcutIcon = fileadmin/img/favicon/icon/favicon.ico
+    Icon = fileadmin/img/favicon/icon/favicon.ico
+
+}

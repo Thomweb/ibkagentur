@@ -1,0 +1,36 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:if condition="{colpos} == 1">
+    <f:then>
+        <f:variable name="imgLazyLoad">eager</f:variable>
+    </f:then>
+    <f:else>
+        <f:variable name="imgLazyLoad">{settings.media.lazyLoading}</f:variable>
+    </f:else>
+</f:if>
+
+<picture>
+    <source srcset="{f:uri.image(image:file, maxWidth: 1201, fileExtension: 'webp')}" media="(min-width: 993px)" type="image/webp">
+    <source srcset="{f:uri.image(image:file, maxWidth: 1200, fileExtension: 'jpg')}" media="(min-width: 992px)" type="image/jpeg">
+
+    <source srcset="{f:uri.image(image:file, maxWidth: 993, fileExtension: 'webp')}" media="(min-width: 769px)" type="image/webp">
+    <source srcset="{f:uri.image(image:file, maxWidth: 992, fileExtension: 'jpg')}" media="(min-width: 768px)" type="image/jpeg">
+
+    <source srcset="{f:uri.image(image:file, maxWidth: 769, fileExtension: 'webp')}" media="(min-width: 577px)" type="image/webp">
+    <source srcset="{f:uri.image(image:file, maxWidth: 768, fileExtension: 'jpg')}" media="(min-width: 576px)" type="image/jpeg">
+
+    <source srcset="{f:uri.image(image:file, maxWidth: 577, fileExtension: 'webp')}" type="image/webp">
+    <source srcset="{f:uri.image(image:file, maxWidth: 576, fileExtension: 'jpg')}" type="image/jpeg">
+
+    <img
+            class="image-embed-item"
+            title="{file.title}"
+            alt="{file.alternative}"
+            src="{f:uri.image(image:file, maxWidth: 1200)}"
+            width="{dimensions.width}"
+            height="{dimensions.height}"
+            loading="{imgLazyLoad}"
+     />
+</picture>
+
+</html>

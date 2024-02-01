@@ -1,0 +1,10 @@
+## Copyright
+lib.copyright = COA
+lib.copyright {
+  10 = TEXT
+  10 {
+    data = date:U
+    strftime = %Y
+    wrap = &copy;&nbsp;2015&nbsp;-&nbsp;|&nbsp;Internetagentur Irma Berscheid-Kimeridze
+  }
+}

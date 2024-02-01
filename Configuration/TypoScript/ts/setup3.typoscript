@@ -1,0 +1,9 @@
+#######################################################
+### SETUP zum Import neues Bild für Header          ###
+### Ergänzung des CSS: Neues Bild Hintergrund       ###
+#######################################################
+
+#page.includeCSS {
+#    css995 = EXT:ibkagentur/Resources/Public/css/body/ibkbody3.css
+#    css995.media = all
+#}

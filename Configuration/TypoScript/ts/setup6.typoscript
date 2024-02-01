@@ -1,0 +1,9 @@
+#######################################################
+### SETUP zum Import neues Bild für Header          ###
+### Ergänzung CSS: Hintergrund Kapitel Blog         ###
+#######################################################
+
+#page.includeCSS {
+#    css995 = EXT:ibkagentur/Resources/Public/css/body/ibkbody6.css
+#    css995.media = all
+#}

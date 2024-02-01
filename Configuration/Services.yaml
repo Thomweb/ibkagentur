@@ -1,0 +1,15 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: false
+
+  Ibk\Ibkagentur\:
+    resource: '../Classes/*'
+
+  Ibk\Ibkagentur\Middleware\Metataggenerator:
+    public: true
+
+  Ibk\Ibkagentur\Dataprocessor\Breadcrumb:
+    public: true
+

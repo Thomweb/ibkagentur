@@ -1,0 +1,38 @@
+
+@import "EXT:ibkagentur/Configuration/TypoScript/ts/config.typoscript"
+
+options.clearCache.all = 1
+
+## PAGE Configuration
+@import "EXT:ibkagentur/Configuration/TypoScript/lib/include/page.typoscript"
+@import "EXT:ibkagentur/Configuration/TypoScript/lib/include/page.case.typoscript"
+
+## Fluid Template, CSS und JS einbinden
+@import "EXT:ibkagentur/Configuration/TypoScript/lib/include/page.meta.typoscript"
+@import "EXT:ibkagentur/Configuration/TypoScript/lib/include/page.fluidtemplate.typoscript"
+@import "EXT:ibkagentur/Configuration/TypoScript/lib/include/plugins.typoscript"
+
+[getTSFE()?.id == 24]
+config.additionalHeaders = HTTP/1.1 404 Not Found
+[getTSFE()]
+
+
+##############################################################
+### Einbindung weiteres TypoScript                         ###
+##############################################################
+
+@import "EXT:ibkagentur/Configuration/TypoScript/lib/footer/lib.copyright.typoscript"
+@import "EXT:ibkagentur/Configuration/TypoScript/lib/navigation/lib.navigation_processor.typoscript"
+@import "EXT:ibkagentur/Configuration/TypoScript/lib/lib.image.typoscript"
+
+## Einbindung des Sliders für den Blog nicht in der Blog Seite selber
+@import "EXT:ibkagentur/Configuration/TypoScript/lib/lib.ibkbloggrid.typoscript"
+@import "EXT:ibkagentur/Configuration/TypoScript/lib/lib.ibkblogall.typoscript"
+@import "EXT:ibkagentur/Configuration/TypoScript/lib/lib.ibkblog.typoscript"
+
+[getTSFE()?.id == 75]
+lib.ibkblog =
+[getTSFE()]
+
+@import "EXT:ibkagentur/Configuration/TypoScript/lib/lib.ke_search.typoscript"
+@import "EXT:ibkagentur/Configuration/TypoScript/ts/cookie.typoscript"

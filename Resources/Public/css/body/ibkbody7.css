@@ -1,0 +1,11 @@
+/* Bild als Hintergrund */
+
+@media(min-width:801px) {
+    body {
+        background: url(https://www.agentur-ibk.de/fileadmin/img/background/SEO-Suchmaschinenoptimierung-TYPO3-Wordpress-DSC01095-40-1920x1600-Agentur-IBK-Koeln.jpg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;	
+        background-size: cover;  
+        background-position: center;
+    }
+}

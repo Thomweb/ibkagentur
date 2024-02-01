@@ -1,0 +1,688 @@
+// Style Sheet Webseite Internetagentur Irma Berscheid-Kimeridze
+
+body {
+  font-family: $font-body;
+  font-size: 16px;
+  color: #222;
+  
+  background-color: $quote-start;
+  background-image: url(/fileadmin/img/gr.png);
+  background-attachment: scroll;
+  background-repeat: repeat-x;
+}
+
+h1, h2, h3, h4, .banner {
+  font-family: $font-heading;
+}
+h1, h2, h3, h4, .banner {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: $blau-stark;
+    clear: both;
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+h2 {
+  font-size: 1.3rem;
+  margin-top: 15px;
+}
+h3 {
+  font-size: 1.2rem;
+  margin-top: 15px;
+}
+h4 {
+  font-size: 1.1rem;
+}
+
+h1, h2, h3 {
+  text-shadow: 1px 1px 1px #ccc;
+}
+
+// Links
+
+a, main a {
+  color: $blau-stark;
+  text-decoration: none;
+  transition: all ease 0.3s;
+}
+
+main a:hover {
+  color: $blau-leicht;
+  text-decoration: none;
+  @include fn-background-grey(220, 0.2);
+  transition: all ease 0.4s;
+}
+
+.banner {
+  font-size: 20px;  
+
+  span {
+    @media (max-width: 399px) {
+      font-size: 20px;  
+    }
+    @media (min-width: 400px) and (max-width: 575px) {
+      font-size: 30px;  
+    }
+    @media (min-width: 576px) {
+      font-size: 40px;  
+    }
+    text-shadow: 2px 2px 2px $blau-leicht;
+  }
+
+  .col-fab {
+    padding-right: 0;
+  }
+}
+
+
+// Schrift in den Popups über Bildern
+@media(max-width:500px) {
+  .div-button-popup {
+    display: none;
+  } 
+}
+@media(min-width:501px) {
+  .div-button-popup {
+    display: block;
+  }
+}
+
+// Font Awesome in Header und Footer
+
+a.fab,
+a.fas,
+a.banner-search {
+  text-decoration: none;
+  color: $blau-stark;
+  //padding: 10px 5px;
+  transition: all ease 0.3s;
+  opacity: 0.7;
+
+  @media (max-width: 575px) {
+    font-size: 1.6rem;
+    padding: 10px 2px;
+  }
+  @media (min-width: 576px) {
+    font-size: 2.0rem;
+    padding: 10px 5px;
+  }
+}
+
+a.fab:hover,
+a.fas:hover {
+  text-decoration: none;
+  color: #eee;
+  opacity: 1;
+  animation: turner 2s 1 linear;
+  transition: all ease 0.5s;
+}
+
+@keyframes turner{
+  from{  transform: rotateY(0deg)   }
+  to  {  transform: rotateY(360deg) }
+}
+
+// Standard Definitionen
+.strong {
+  font-weight: bold;
+}
+.small {
+  font-size: 0.7rem;
+}
+.hidden {
+  display: none;
+}
+#header > div.row,
+#main > div.row,
+aside > div.row,
+#footer > div.row {
+  padding: 0;
+  margin: 0;
+}
+
+// Webseite ist mittig ausgerichtet 
+// Bei kleinerer Auflösung bleibt Seitenrand von 20px
+@media(max-width:920px) {
+  #header, aside, footer, #main, #footer {
+    margin: 30px auto;
+  }
+}
+@media(min-width:921px) {
+  #header, aside, footer, #main, #footer {
+    margin: 30px auto 40px auto;
+  }
+}
+
+// Blöcke für Header, Inhalt und Footer todo gutter?
+#header, aside, footer, #main, #footer {
+  max-width: 830px;
+}
+#main, #footer, #aside-blogtop, #aside-blogbottom {
+  padding: 15px 5px;
+}
+
+#header, #aside-blogtop, #aside-tutorial, #main, #aside-blogbottom, #footer {
+  box-shadow: 0px 0px 10px 2px #222;
+}
+
+#aside-blogbottom h4 {
+  color: $blau-dark;
+}
+
+#header {
+  > div {
+    &.banner {
+      .fas {
+        float: right;
+      }
+    }
+    &.banner, 
+    &.navigation-banner {
+      @include fn-background-grey(221, 0.7);
+    }
+
+    > div.navigation-top {
+      background-color: #fff;
+    }
+
+    &.navigation-breadcrumb {
+      //@include fn-background-grey(221, 0.7);
+      background: #ddd;
+      padding-top: 0px;
+      padding-bottom: 0px;
+    }
+  }
+}
+
+#footer {
+  @media (max-width: 575px) {
+    margin-bottom: 100px;
+  }
+  @media (min-width: 576px) {
+    margin-bottom: 80px;
+  }
+}
+
+// Untere Zeile
+#bottom {
+  display: none;
+  @include fn-background-grey(225, 0.8);
+  position: fixed;
+  padding-top: 0;
+  padding-bottom: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  box-shadow: 0px -5px 5px 0px rgba(225, 225, 225, 0.8);
+
+  > div {
+    max-width: 830px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .fab,
+  .fas {
+    font-size: 2.0rem;
+    text-decoration: none;
+    color: $blau-stark;
+    padding: 1px 5px;
+    transition: all ease 0.3s;
+    opacity: 0.8;
+  }  
+}
+
+// alle Überschriften
+.frame > header {
+    background-color: #fff;   
+  }
+  
+aside {
+  background-color: $grey-hell; 
+  padding-bottom: 0px;  
+}
+article, #main {
+  background-color: #fff;   
+}
+footer {
+  @include fn-background-grey(200, 0.9);
+  margin-bottom: 30px;  
+}
+
+// Titel Header
+.text-title {
+  font-size: 30px;
+  font-weight: bold;
+}
+.text-add {
+  margin-bottom: 10px;
+}
+
+// Bild im Text
+div.ce-media > img {
+  float: right;
+  margin: 0 0 10px 10px;
+}
+div.ce-gallery figure > img,
+div.ce-gallery > div > div > figure > img,
+figure.image > img,
+.image-embed-item {
+  float: right;
+  margin: 0 0 0 5px;
+  max-width: 100%;
+  height: auto;
+}
+
+.image-embed-item.img-left {
+  filter: grayscale(0%) brightness(80%) opacity(80%);
+  @include fn-border-radius(2px);
+  transition: all 0.3s; 
+}
+.image-embed-item.img-left:hover {
+  filter: grayscale(0%) brightness(100%) opacity(100%);
+  @include fn-border-radius(1px);  
+  transition: all 0.5s; 
+}
+
+// Untertitel eines Bildes
+#main figure > figcaption {
+  background-color: $quote-start;
+  color: $blau-stark;
+  font-size: 0.9rem;
+  padding: 3px 5px;
+  font-weight: bold;
+}
+
+// Social Media Icons
+.img-social {
+  margin: 15px 0 5px 5px;
+  float: right;
+}
+  
+ .nodisplay {
+   display: none;
+ }
+
+// Inhaltsbereich
+
+.img-responsive,
+.img-accordion,
+.img-faq {
+  max-width: 100%;
+  height: auto;
+}
+
+div.div-accordion-bild > img.img-responsive, 
+div.div-accordion-bild > a > img.img-responsive, 
+div.div-accordion-bild > a > img {
+  float: right;
+  max-width: 100%;
+  height: auto;
+  margin: 15px 0px 15px 15px;
+}
+.img-accordion {
+  float: right;
+}
+.img-geolingua {
+    display: flex;
+    justify-content: center;
+}
+
+.div-button {
+  position: relative;
+}
+
+.div-button-text {
+  padding: 1px;
+  //background: $blau-stark;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+
+.div-button-popup {
+  position: absolute;
+  padding: 10px; 
+  margin: 10px 12px 0 0;
+  font-size: 0;
+  opacity: 0.0;
+  transition: all 0.3s; 
+}
+
+.div-button-popup:hover {
+  @include fn-background-grey(250, 0.9);
+  opacity: 1.0;
+}
+
+#main div.row.div-shariff {
+  margin-top: 15px;
+}
+
+
+// Source Code formatieren
+
+pre {
+  @include fn-border-radius(0);
+  border: 1px $preformat-hell solid;
+  background-color: $preformat-grey;
+  color: $blau-stark;
+  font-size: 0.8rem;
+  padding: 10px 5px 10px 10px;
+}
+
+code {
+	display: block;
+	color: #333;
+  border: 1px $preformat-hell solid;
+  @include fn-border-radius(0);
+	background-color: $preformat-grey;
+	padding: 10px;
+	font-size: 0.8rem;
+	white-space: pre;
+	overflow: auto;
+}	
+
+blockquote {
+  margin: 0 1rem 0.75rem 1rem;
+  padding: 1rem 0.75rem;
+  background: linear-gradient(90deg, $quote-start, $quote-end);
+  box-shadow: 2px 2px 15px #ccc;
+}
+blockquote p {
+  margin: 0;
+}
+
+
+// Autor am Ende des Inhalts
+.div-author {
+  border-top: 1px $blau-leicht dotted;
+  color: $blau-stark;
+  font-size: 0.9rem;
+  font-weight: bold;
+  padding-top: 5px;
+  padding-bottom: 15px;
+}
+
+// Listelemente im Fliesstext
+#bloglist-all ul,
+#main ul {
+  padding-left: 2em;
+}
+#bloglist-all ul > li,
+#main ul > li {
+  color: #444; 
+  list-style-type: square;
+  //list-style-type: "… ";
+}
+
+// Navigation in Fliesstext (Section Menu)
+
+#main {
+  .frame-type-menu_section {
+    > ul {
+      padding-left: 0;
+
+      > li {
+        list-style-type: none;
+        margin-top: -10px;
+
+        > a {
+          display: none;
+        }
+
+        > ul {
+          padding-left: 2em;
+        }
+
+        > ul > li {
+          color: $blau-hover;
+          list-style-type: square;
+        }
+      }
+    }
+  }
+}
+
+// Abstract Menu Navigation
+
+#main {
+  .frame-type-menu_sitemap_pages {
+    > ul {
+      padding-left: 2em;
+
+      > li > ul {
+        padding-left: 1em;
+      }
+      > li,
+      > li > ul > li {
+        color: $blau-hover; 
+        //list-style-type: square;
+        list-style-type: "» ";
+      }
+    }
+  }
+}
+
+#bloglist-all ul > li {
+  color: $blau-hover; 
+  list-style-type: square;
+  list-style-type: "✓ ";
+}
+
+// Buttons
+.button {
+  color: #ddd;
+  background-color: $blau-stark;
+  border: none;
+  padding: 5px 10px;
+  margin-right: 3px;
+  transition: all ease 0.5s;
+
+
+}
+.download, 
+.external-link-new-window, 
+.internal-link-new-window {
+  color: $blau-stark;
+  background-color: $blau-hover;
+  border: none;
+  padding: 5px 10px 5px 10px;
+}
+
+.button-navigation {
+  background-color: $kontakt-hell;
+  margin-top: -18px;
+  color: $blau-dark;
+}
+
+.button-accordion {
+  margin-bottom: 15px;
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+
+.div-button-popup > a > p {
+  color: $blau-stark;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.button:hover {
+  color: $blau-stark;
+  background-color: $blau-hover;
+  text-decoration: none;
+  transition: all ease 0.5s; 
+}
+
+a.download:hover, .download:hover, .external-link-new-window:hover, .internal-link-new-window:hover {
+  background-color: $blau-stark;
+  color: $blau-hover;
+  text-decoration: none;
+}
+
+.button-navigation:hover {
+  background-color: $blau-stark;
+  color: #fff;
+}
+a.button-layer > p {
+  margin-block-end: 0;
+}
+
+// Inhalte Accordions
+.ui-accordion-content-active > p {
+  margin-top: 10px;
+}
+
+#accordion a {
+  color: $blau-stark;
+}
+#accordion .button-accordion a {
+  color: #eee;
+}
+#accordion .button-accordion a:hover {
+  color: $blau-stark;
+}
+
+// Inhalte FAQ Liste
+
+div.faq-bild,
+div.faq-text {
+  clear: both;
+  max-width: 100%;
+}
+
+div.faq-bild {
+  display: flex;
+  justify-content: center;
+}
+
+div.faq-bild img {
+  margin-top: 15px;
+}
+
+.faqlist p, 
+.faqlist ul {
+  margin-top: 15px;
+  margin-bottom: 0;
+}
+.faqlist p:last-child {
+  padding-bottom: 0;
+}
+.faqlist a {
+  color: $blau-stark;
+}
+
+// FOOTER
+footer > div.row > div.col-md-12, 
+footer > div.row > div.col-md-4, 
+footer > div.row > div.col-md-3 {
+  font-size: 0.8rem;
+  color: #222;
+  margin-bottom: 15px;
+}
+
+
+#footer .col-md-4 a.bread_link_small {
+  line-height: 30px;
+  padding: 5px 5px 5px 0;
+}
+
+// Kontaktformular
+
+form > fieldset > div > div > label {
+    text-align: left !important;
+}
+
+
+@media(max-width:900px) {
+  .form-contact-content {
+    margin: 0px 0px 5px 0px;
+    clear: both;    
+    float: left;
+  }
+}
+@media(min-width:901px) {
+  .form-contact-content {
+    margin: 0px 0px 5px 150px;
+    clear: none;
+  }
+}
+.form-contact-line {
+  width: 540px;
+  clear: both;
+  margin: 2px 0px;
+}
+.form-contact-title, .form-title {
+  width: 140px;
+  float: left;
+  margin: 0px 0px 5px 0px; 
+}
+.form-contact-content {
+  width: 300px;
+
+}
+.red {
+  color: #d00;
+}
+.white, a.white {
+  color: #fff;
+  padding: 3px;
+}
+a.white:hover {
+  color: #ddd;
+  background-color: rgba(39, 91, 164, 0.8); 
+  text-decoration: none;
+}
+
+.form-input {
+  width: 300px;
+  border: 1px $blau-stark dotted;
+
+}
+
+// Tabelle formatieren
+#main thead tr:nth-child(1) {
+  background-color: $blau-leicht;
+}
+#main tbody tr:nth-child(odd) {
+  background-color: #eee;
+  transition: all ease 0.4s;
+}
+#main tbody tr:nth-child(even) {
+  background-color: $table-grey;
+  transition: all ease 0.4s;
+}
+#main tbody tr:hover {
+  background-color: $table-hover;
+  transition: all ease 0.4s;
+  color: $blau-stark;
+}
+
+#main td {
+  border-bottom: 1px $blau-leicht dotted;
+}
+#main td:nth-child(1) {
+  width: 20%;
+  font-weight: bold;
+}
+#main td:nth-child(2),
+#main td:nth-child(3) {
+  border-left: 1px $blau-leicht dotted;
+  width: 40%;
+}
+
+// Links
+:focus {
+  outline: none;
+  @include fn-border-radius(none);
+}
+
+.link-home {
+  transition: all ease 0.5s; 
+}
+
+

@@ -1,0 +1,141 @@
+@media(min-width:1px) {
+  #bloggrid > div { 
+    margin-bottom: 15px;
+    margin-top: 0; 
+  }
+}
+
+@media(min-width:576px) {
+  #bloggrid > div { 
+    margin-bottom: 15px;
+    margin-top: 15px;
+   }
+}
+
+#blogtop {
+  padding-bottom: 15px;
+}
+
+.tx-ibkblog > .row {
+  margin: 0 -15px;
+}
+
+.blog-button {
+  line-height: 50px;  
+} 
+
+.active-button {
+  color: #fff;
+  font-weight: bold;
+}
+
+.blog-more-items,
+.still-more-items {
+  cursor: pointer;
+}
+
+
+.div_kasten {
+  clear: both;
+  margin-bottom: 15px;
+}
+
+.blog-titel {
+  margin-top: -10px;
+  margin-bottom: 15px;
+}
+.blog-titel > div {
+  padding: 5px 15px;
+  background-color: $quote-end;
+}
+.blog-titel > div > h2 {
+  margin-top: 5px;
+}
+
+.blog_kurzfassung {
+  color: $blau-stark;
+}
+
+.blog-toggle, 
+.blog-toggle-close {
+  display: none;
+}
+
+#bloggrid {
+  > div {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
+  img.blog-img-grid {
+    float: right;
+    margin: 0 3px 3px;
+    filter: grayscale(0%) brightness(100%) opacity(80%);
+    transition: all ease 0.5s; 
+    @include fn-border-radius(8px);
+  }
+
+  article {
+    &.blog-grid-content {
+      padding: 10px 5px 40px 10px;
+      background-color: $blau-hell;
+      box-shadow: 0px 0px 5px 1px $blau-hell;
+      transition: all ease 0.5s; 
+
+      &:hover {
+        background-color: $blau-leicht;
+        box-shadow: 0px 0px 10px 2px $blau-stark;
+        color: #eee;
+        transition: all ease 0.5s; 
+      
+        & > p:nth-child(1) {
+          color: #fff;
+          transition: all ease 0.5s;
+        }
+
+        & > p > img.blog-img-grid {
+          filter: grayscale(100%) brightness(120%) opacity(100%);
+          transition: all ease 0.5s;
+        }
+      }
+
+      & > p {
+        font-size: 0.9rem;
+      }
+      & > p:nth-child(1) {
+        font-size: 0.9rem;
+        font-weight: bold;
+        color: $blau-stark;
+        margin-bottom: 5px;
+      }
+
+      & > p:nth-child(2) {
+        margin-bottom: 5px;
+      }
+      & > p:nth-child(4) > a {
+        position: absolute;
+        text-align: center;
+        bottom: 10px;
+
+        @media (max-width: 575px) {
+          width: calc(100% - 24px);
+          left: 12px;
+          right: 12px;
+          bottom: 0;
+        }
+        @media (min-width: 576px) and (max-width: 991px) {
+          width: 80%;
+          left: 10%;
+          right: 10%;
+        }
+        @media (min-width: 992px) {
+          width: calc(100% - 44px);
+          left: 22px;
+          right: 22px;
+        }
+      }
+    }
+  }
+}

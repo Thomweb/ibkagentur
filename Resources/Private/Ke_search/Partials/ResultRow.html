@@ -1,0 +1,54 @@
+<!--
+	=====================
+	Partials/ResultRow.html
+-->
+
+<div class="result-list-item result-list-item-type-{resultrow.type}">
+
+	<f:if condition="{conf.resultsNumeration}">
+		<span class="result-number">{resultrow.number}.</span>
+	</f:if>
+
+	<f:if condition="{resultrow.orig_row.link}">
+		<f:then>
+			<span class="result-title"><a href="/blog/{resultrow.orig_row.link}">{resultrow.title_text}</a></span>
+		</f:then>
+		<f:else>
+			<span class="result-title"><f:format.raw>{resultrow.title}</f:format.raw></span>
+		</f:else>
+	</f:if>
+
+	<span class="clearer">&nbsp;</span>
+	<div class="add-info">
+		<i class="far fa-clock"></i> <f:format.date format="d.m.Y">{resultrow.date_timestamp}</f:format.date><br />
+	</div>
+	<span class="teaser_icon">
+        <f:render
+            section="typeIconOrPreviewImage"
+            arguments="{icon: resultrow.typeIconPath, filePreviewId: resultrow.filePreviewId, treatIdAsReference:resultrow.treatIdAsReference, iconConf: conf.showTypeIcon, iconBlog: resultrow.orig_row.link, iconTitle: resultrow.title_text}"
+        />
+    </span>
+	<span class="result-teaser"><f:format.raw>{resultrow.teaser}</f:format.raw></span>
+	<span class="clearer">&nbsp;</span>
+</div>
+
+
+<f:section name="typeIconOrPreviewImage">
+	<f:if condition="{iconBlog}">
+		<f:then>
+			<img title="{iconTitle}" alt="{iconTitle}" src="https://www.agentur-ibk.de/fileadmin/img/Blog/Blog-Nachrichten-Aktuelles-DSC00033-100x75-TYPO3-Wordpress-SEO-Agentur-Koeln.jpg" width="100" height="75">
+		</f:then>
+		<f:else>
+			<f:if condition="{iconConf} && !{filePreviewId}">
+				<f:then>
+					<f:image src="{icon}" maxWidth="16" maxHeight="16" />
+				</f:then>
+				<f:else>
+					<f:if condition="{filePreviewId}">
+						<f:image src="{filePreviewId}" treatIdAsReference="{treatIdAsReference}" maxWidth="100" />
+					</f:if>
+				</f:else>
+			</f:if>
+        </f:else>
+    </f:if>
+</f:section>

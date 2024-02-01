@@ -1,0 +1,45 @@
+// Style Sheet Webseite Internetagentur Irma Berscheid-Kimeridze
+
+// Standard Farben der Webseite
+
+$blau-stark: #275ba4;
+$blau-dark: #0b2954;
+$blau-leicht: #729ebd;
+$blau-hell: #b7d4e8;
+$blau-hover: #a4c2ed;
+$quote-start: #d7e6f0;
+$quote-end: #e7edf1;
+$orange-stark: #ff8700;
+$orange-leicht: #f49700;
+$orange-hell: #f5dbbd;
+$orange-hover: #ee7600;
+$kontakt-hell: #afc9ec;
+$preformat-hell: #e8eff9;
+
+// Grautöne
+$preformat-grey: #f9f9f9;
+$grey-hell: #fefef7;
+$table-grey: #f5f5f5;
+$table-hover: #fefefe;
+
+// Mixins und Funktionen
+$font-heading: Gudea, Stoke, Verdana, serif;
+$font-body: Montserrat, Verdana, Arial, Helvetica, sans-serif;
+
+@mixin fn-linear-gradient($color-start, $color-end) {
+  background: -webkit-linear-gradient($color-start, $color-end); 
+  background: -o-linear-gradient($color-start, $color-end);
+  background: -moz-linear-gradient($color-start, $color-end);
+  background: linear-gradient($color-start, $color-end);
+}
+
+@mixin fn-border-radius($border-values) {
+  border-radius: $border-values;
+  -moz-border-radius: $border-values;
+  -webkit-border-radius: $border-values;
+  -ms-border-radius: $border-values;
+}
+
+@mixin fn-background-grey($color, $opacity) {
+  background-color: rgba($color, $color, $color, $opacity);
+}

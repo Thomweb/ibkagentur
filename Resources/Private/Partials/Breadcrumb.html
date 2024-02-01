@@ -1,0 +1,59 @@
+<div class="row navigation-breadcrumb">
+    <div class="col-12 col-sm-12 col-md-12 col-breadcrumb">
+        <a href="#" class="bread-navigation-open" title="Parallel Navigation öffnen">
+            <span class="breadcrumb-text-open">Ihr Klickpfad</span> <i
+                class="fas fa-plus-square breadcrumb-icon"></i>
+        </a>
+        <a href="#" class="bread-navigation-close" title="Parallel Navigation schließen">
+            <span class="breadcrumb-text-open">Navigation schließen</span> <i
+                class="fas fa-minus-square breadcrumb-icon"></i>
+        </a>
+
+        <span itemscope itemtype="https://schema.org/BreadcrumbList" id="breadcrumb">
+            <f:for each="{breadMenu}" as="menuItem" iteration="breadIteration">
+
+                <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+
+                    <f:if condition="{breadIteration.index}>0"><i class="fas fa-angle-right"></i></f:if>
+
+                    <f:if condition="{breadIteration.cycle}<{breadIteration.total}">
+                        <f:then>
+                            <a href="{menuItem.link}"
+                               title="{menuItem.data.title}"
+                               class="bread_link_small"
+                               itemprop="item"><span itemprop="name">{menuItem.data.title}</span></a>
+                        </f:then>
+                        <f:else>
+                            <f:if condition="{blogPostTitle}">
+                                <f:then>
+                                    <a href="{menuItem.link}"
+                                       title="{menuItem.data.title}"
+                                       class="bread_link_small"
+                                       itemprop="item"><span itemprop="name">{menuItem.data.title}</span></a>
+                                </f:then>
+
+                                <f:else>
+                                    <span class="bread_link_small" itemprop="name">{menuItem.data.title}</span>
+                                </f:else>
+
+                            </f:if>
+                        </f:else>
+
+                    </f:if>
+
+                    <meta itemprop="position" content="{breadIteration.cycle}"/>
+                </span>
+            </f:for>
+
+            <f:if condition="{blogPostTitle}">
+                <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <i class="fas fa-angle-right"></i>
+                    <span class="bread_link_small" itemprop="name">{blogPostTitle}</span>
+                    <meta itemprop="position" content="{breadIteration.cycle}"/>
+                </span>
+           </f:if>
+
+
+        </span>
+    </div>
+</div>

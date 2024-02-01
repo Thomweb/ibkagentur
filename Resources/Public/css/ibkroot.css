@@ -1,0 +1,62 @@
+/* Style Sheet Webseite Internetagentur Irma Berscheid-Kimeridze */
+
+/* Standard Farben der Webseite */
+:root {
+  --blau-stark: #275ba4;
+  --blau-leicht: #729ebd;
+  --blau-hell: #b7d4e8;
+  --blau-hover: #a4c2ed;
+  --quote-start: #d7e6f0;
+  --quote-end: #e7edf1;
+  --orange-stark: #ff8700;
+  --orange-leicht: #f49700;
+  --orange-hell: #f5dbbd;
+  --orange-hover: #ee7600;
+}
+
+/* Einbindung Google Fonts */
+
+/* hammersmith-one-regular - latin */
+/*@font-face {
+  font-family: Hammersmith One;
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url('fonts/hammersmith-one-v10-latin-regular.eot');
+  src: local('Hammersmith One'), local('HammersmithOne'),
+       url('fonts/hammersmith-one-v10-latin-regular.eot?#iefix') format('embedded-opentype'),
+       url('fonts/hammersmith-one-v10-latin-regular.woff2') format('woff2'),
+       url('fonts/hammersmith-one-v10-latin-regular.woff') format('woff'),
+       url('fonts/hammersmith-one-v10-latin-regular.ttf') format('truetype'),
+       url('fonts/hammersmith-one-v10-latin-regular.svg#HammersmithOne') format('svg');
+}
+*/
+/* montserrat-regular - latin */
+@font-face {
+  font-family: Montserrat;
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url('fonts/montserrat-v14-latin-regular.eot');
+  src: local('Montserrat Regular'), local('Montserrat-Regular'),
+       url('fonts/montserrat-v14-latin-regular.eot?#iefix') format('embedded-opentype'),
+       url('fonts/montserrat-v14-latin-regular.woff2') format('woff2'),
+       url('fonts/montserrat-v14-latin-regular.woff') format('woff'),
+       url('fonts/montserrat-v14-latin-regular.ttf') format('truetype'),
+       url('fonts/montserrat-v14-latin-regular.svg#Montserrat') format('svg');
+}
+
+/* gudea-regular - latin */
+@font-face {
+  font-family: Gudea;
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url('fonts/gudea-v10-latin-regular.eot');
+  src: local(''),
+       url('fonts/gudea-v10-latin-regular.eot?#iefix') format('embedded-opentype'),
+       url('fonts/gudea-v10-latin-regular.woff2') format('woff2'),
+       url('fonts/gudea-v10-latin-regular.woff') format('woff'),
+       url('fonts/gudea-v10-latin-regular.ttf') format('truetype'),
+       url('fonts/gudea-v10-latin-regular.svg#Gudea') format('svg');
+}

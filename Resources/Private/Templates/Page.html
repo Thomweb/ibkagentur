@@ -1,0 +1,99 @@
+<f:layout name="Default" />
+
+<f:section name="search">
+
+    <div class="row">
+        <div class="col-md-12 col-sm-12">
+          <f:cObject typoscriptObjectPath="lib.ke_search_top" />  
+        </div>
+      </div>
+</f:section>
+
+<!-- Geolingua ANFANG -->
+<f:section name="geolingua">
+  <f:render partial="Boxes/Geolingua" />
+</f:section>
+<!-- Geolingua ENDE -->
+
+<f:section name="content">
+  <f:if condition="{page_content}">
+    <!-- Inhalt oberer Teil der Webseite ANFANG  -->
+    <div class="row">
+      <div class="col-12 col-sm-12 col-md-12">
+        <f:format.raw>{page_content}</f:format.raw>
+      </div>
+    </div>
+    <!-- Inhalt oberer Teil der Webseite ENDE  -->
+  </f:if>
+
+  <f:if condition="{faq_content}">  
+    <!-- Inhalt FAQ ANFANG  -->
+    <div class="row">
+      <div class="col-12 col-sm-12 col-md-12" itemscope itemtype="https://schema.org/FAQPage">
+        <f:format.raw>{faq_content}</f:format.raw>
+      </div>
+    </div>
+    <!-- Inhalt FAQ ENDE  -->
+  </f:if>
+
+  <f:if condition="{blog_content}">  
+        <f:format.raw>{blog_content}</f:format.raw>
+  </f:if>
+  <f:if condition="{bilder_buttons}">
+    <!-- Inhalt Bilder Grid Raster ANFANG  -->
+    <div class="row">
+      <f:format.raw>{bilder_buttons}</f:format.raw>  
+    </div>            
+    <!-- Inhalt Bilder Grid Raster ENDE  -->
+  </f:if>
+
+  <f:if condition="{page_accordion}">
+    <!-- Accordion Inhalt der Webseite ANFANG  -->
+    <div class="row">
+      <div class="col-12 col-sm-12 col-md-12">
+        <div id="accordion">
+          <f:format.raw>{page_accordion}</f:format.raw>  
+        </div>
+      </div>
+    </div>
+    <!-- Accordion Inhalt der Webseite ENDE  -->
+  </f:if> 
+
+  <f:if condition="{page_bottom}">  
+    <!-- Inhalt unterer Teil der Webseite ANFANG  -->
+    <div class="row">
+      <div class="col-12 col-sm-12 col-md-12">
+        <f:format.raw>{page_bottom}</f:format.raw>
+      </div>
+    </div>
+    <!-- Inhalt unterer Teil der Webseite ENDE  -->
+  </f:if>   
+
+  <f:if condition="{data.author}">
+    <div class="row">
+      <div class="col-12 col-sm-12 col-md-12 row-author">
+        <div class="div-author">
+          <i class="far fa-keyboard"></i> <span itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">{data.author}</span></span>
+          <i class="far fa-clock"></i> <span itemprop="datePublished" content="<f:format.date format="d.m.Y">{data.SYS_LASTCHANGED}</f:format.date>"><f:format.date format="d.m.Y">{data.SYS_LASTCHANGED}</f:format.date></span>
+        </div>
+      </div>
+    </div> 
+  </f:if>
+
+</f:section>
+
+<!-- Blog der Agentur Slider ANFANG -->
+
+<f:section name="bloggrid">
+
+  <div class="row">
+    <div class="col-12 col-sm-12 col-md-12">
+      <h4>Neu aus dem Blog der Agentur</h4>
+      <f:cObject typoscriptObjectPath="lib.ibkbloggrid" />  
+    </div>
+  </div>
+
+</f:section>
+
+<!-- Blog der Agentur Slider ENDE -->
+

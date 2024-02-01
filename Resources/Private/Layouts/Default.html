@@ -1,0 +1,62 @@
+
+<f:render partial="Assets" arguments="{uid: data.uid}" />
+
+<div itemscope itemtype="https://schema.org/WebApplication" class="container-fluid">
+
+  <div class="hidden" itemprop="name">{page_title}</div>
+
+  <!-- Header Anfang -->
+  <header id="header">  
+
+    <f:render partial="Banner" arguments="{uid: data.uid, description: data.description, bannerMenu: bannerMenu}" />
+
+    <!-- Suche Anfang -->
+    <f:if condition="{0:data.uid} != {0:'44'}">
+      <div class="ke-search-top">
+        <f:render section="search" />
+      </div>
+    </f:if>
+    <!-- Suche Ende -->
+
+    <f:render partial="Navigation-Megamenu5-listing" arguments="{headerMenu: headerMenu}" />
+
+    <f:if condition="{0:data.uid} != {0:'2'}">
+      <f:render partial="Breadcrumb" arguments="{breadMenu: breadMenu, blogPostTitle: blogPostTitle}" />
+    </f:if>
+
+  </header>  
+  <!-- Header Ende -->
+
+  <!-- Inhalt Anfang -->
+  <main id="main">
+    <f:render section="content" />
+  </main>
+  <!-- Inhalt Ende -->
+
+  <!-- Georgisches Lehrbuch Anfang -->
+  <aside id="aside-tutorial">
+    <f:render section="geolingua" />
+  </aside>
+<!-- Georgisches Lehrbuch Ende -->
+
+  <!-- Blog Anfang -->
+  <f:if condition="{0:data.uid} != {0:'75'}">
+    <aside id="aside-blogbottom">
+      <f:render section="bloggrid" />
+    </aside>
+  </f:if>
+  <!-- Blog Ende -->
+
+
+  <footer id="footer">
+    <f:render partial="Footer" arguments="{footerMenu: footerMenu}" />  
+  </footer>
+
+  <nav id="bottom">
+    <f:render partial="Bottom" arguments="{bottomMenu: bottomMenu}" />  
+  </nav>
+
+  <div id="reiter">
+    <f:render partial="Reiter" />  
+  </div>
+</div>

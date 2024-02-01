@@ -1,0 +1,16 @@
+// Farben OM Cookie Consent
+
+.tx-om-cookie-consent {
+  .om-cookie-panel {
+    .cookie-panel__checkbox:checked+label::before {
+      background-color: $blau-dark;
+    }
+    .cookie-panel__checkbox+label::before {
+      border: 2px solid $blau-dark;
+    }
+    .cookie-panel__button--color--green {
+      background-color: $blau-stark;
+    }
+
+  }
+}

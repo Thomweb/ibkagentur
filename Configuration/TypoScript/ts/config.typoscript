@@ -1,0 +1,38 @@
+config {
+    contentObjectExceptionHandler = 0
+    
+    xmlprologue        = none
+    uniqueLinkVars      = 1
+    linkVars        := addToList(L(1),type(3))
+    absRefPrefix = /
+    cache_period      = 86400
+    no_cache      = 0
+    index_enable = 1
+
+    ## Character sets
+    renderCharset      = utf-8
+    metaCharset        = utf-8
+
+    ## META Angaben
+    pageTitleFirst      = 1
+    #noPageTitle        = 1
+    sendCacheHeaders    = 1
+    message_page_is_being_generated = Die angeforderte Seite wird Ihnen gleich angezeigt.
+
+    #spamProtectEmailAddresses = 2
+    #spamProtectEmailAddresses_atSubst = (at)
+
+    headerComment (
+Diese Webseite ist von der Internetagentur Irma Berscheid-Kimeridze erstellt worden.
+TYPO3, TypoScript, PHP, HTML, CSS, jQuery, JavaScript, MySQL: Thomas Berscheid
+Alle Texte:   Thomas Berscheid, Irma Berscheid-Kimeridze
+Web:          www.agentur-ibk.de
+Tel:          0221/7327201
+Fax:          0221/7327202
+
+Danke fuer Ihren Blick in unseren Quelltext!
+
+    )  
+}
+
+

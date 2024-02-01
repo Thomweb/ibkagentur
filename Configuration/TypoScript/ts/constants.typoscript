@@ -1,0 +1,59 @@
+##############################################################
+### IBK Provider Extension - Template Paths                ###
+##############################################################
+
+plugin.tx_ibkagentur {
+	view {
+		# cat=plugin.tx_ibkagentur/file; type=string; label=Path to template root (FE)
+		templateRootPaths {
+			10 = EXT:ibkagentur/Resources/Private/Templates/
+		}
+		# cat=plugin.tx_ibkagentur/file; type=string; label=Path to template partials (FE)
+		partialRootPaths {
+			10 = EXT:ibkagentur/Resources/Private/Partials/
+		}
+		# cat=plugin.tx_ibkagentur/file; type=string; label=Path to template layouts (FE)
+		layoutRootPaths {
+			10 = EXT:ibkagentur/Resources/Private/Layouts/
+		}
+	}
+}
+
+##############################################################
+### Eigene Partials für Frontend Rendering                 ###
+##############################################################
+
+styles {
+	templates {
+		partialRootPath = EXT:ibkagentur/Resources/Private/Content/Partials/
+		templateRootPath = EXT:ibkagentur/Resources/Private/Content/Templates/
+		layoutRootPath = EXT:ibkagentur/Resources/Private/Content/Layouts/
+	}
+}
+
+##############################################################
+### KE Facetted Search - Template Paths Search Box         ###
+##############################################################
+
+plugin.tx_kesearch.templateRootPath = EXT:ibkagentur/Resources/Private/Ke_search/Templates/
+
+##############################################################
+### Bildgrößen Standard überschreiben                      ###
+##############################################################
+
+styles.content.imgtext.maxWInText = 2000
+styles.content.textmedia.maxWInText = 2000
+styles.content.imgtext.linkWrap.width = 2000
+styles.content.imgtext.maxW = 2000
+styles.content.textmedia.maxW = 2000
+
+tt_content.image.20.maxW = 2000
+tt_content.image.20.maxH = 2000
+tt_content.image.20.maxWInText = 2000
+
+############################################################
+### Font Awesome Extension                               ###
+### Laden des externen Style Sheet unterbinden           ###
+############################################################  
+
+plugin.tx_ckeditor_fontawesome.loadCSS = 0

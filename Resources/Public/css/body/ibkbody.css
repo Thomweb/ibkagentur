@@ -1,0 +1,13 @@
+/* Bild als Hintergrund */
+
+
+
+@media(min-width:801px) {
+    body {
+        background: url(https://www.agentur-ibk.de/fileadmin/img/background/Internetagentur-TYPO3-Wordpress-CSS-Frontend-DSC01202-1920x1200-Koeln.jpg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;	
+        background-size: cover;  
+        background-position: center;
+    }
+}

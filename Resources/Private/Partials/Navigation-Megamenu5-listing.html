@@ -1,0 +1,58 @@
+<div class="container-fluid">
+
+<div class="row navigation-top">
+
+    <div class="col-12 nav-container">
+        <nav class="navbar navbar-expand-md navbar-light bg-light">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>                
+            <div class="collapse navbar-collapse" id="navbar">
+                <ul class="navbar-nav mr-auto">                    
+                    <f:for each="{headerMenu}" as="menuLevel1Item">
+                        <li class="nav-item dropdown has-megamenu">
+                            <a class="nav-link dropdown-toggle" title="{menuLevel1Item.data.subtitle}" href="#" id="dropdown{menuLevel1Item.data.uid}" data-bs-toggle="dropdown">{menuLevel1Item.data.title}</a>
+                            <div class="dropdown-menu megamenu container-fluid" role="menu">
+                                <div class="row">
+                                    <f:if condition="{menuLevel1Item.children}">
+                                        <f:for each="{menuLevel1Item.children}" as="menuLevel2Item">
+                                            <div class="col-12 col-sm-6 col-md-4 col-lg-3 div-nav">
+                                                <div class="col-megamenu">
+                                                    <f:link.page pageUid="{menuLevel2Item.data.uid}" title="{menuLevel2Item.data.seo_title}" class="link-level3 strong">{menuLevel2Item.data.title}</f:link.page>
+
+                                                    <f:if condition="{menuLevel2Item.data.abstract}">
+                                                        <div class="row">
+                                                            <div class="col-12 nav-level3">
+                                                                {menuLevel2Item.data.abstract}
+                                                            </div>
+                                                        </div>
+                                                    </f:if>           
+                                                    
+                                                    <f:if condition="{menuLevel2Item.children}">
+                                                        <ul>
+                                                            <f:for each="{menuLevel2Item.children}" as="menuLevel3Item">
+
+                                                                <li class="nav-level3">
+                                                                    <f:link.page pageUid="{menuLevel3Item.data.uid}" class="link-level3" title="{menuLevel3Item.data.seo_title}">{menuLevel3Item.data.title}</f:link.page>
+                                                                </li>
+
+                                                            </f:for>
+                                                        </ul>
+                                                    </f:if>
+
+                                                </div>
+                                            </div>
+                                        </f:for>
+                                    </f:if>
+                                </div>
+                            </div>
+
+                        </li>
+                    </f:for>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</div>
+
+</div>

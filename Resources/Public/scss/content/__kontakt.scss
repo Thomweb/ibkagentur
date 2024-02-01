@@ -1,0 +1,107 @@
+// Powermail Formulare ANFANG
+
+// Abstände gesamtes Formular
+.tx-powermail > div.container-fluid {
+    padding: 0;
+    margin: 0;
+}
+//.powermail_fieldwrap {
+//    padding: 0;
+//}
+
+// Label über den Eingabefeldern
+.form-horizontal .control-label {
+	text-align: left;
+	color: $blau-stark;
+}
+
+// Button zum Abschicken (Submit)
+input.btn.btn-primary {
+	width: 100%;
+	background-color: $blau-stark;
+	border: none;
+  @include fn-border-radius(0);
+	transition: all ease 0.5s;
+}
+input.btn.btn-primary:hover {
+	background-color: $blau-leicht;
+	transition: all ease 0.8s;
+}
+
+.powermail_fieldwrap select,
+.powermail_fieldwrap input,
+.powermail_fieldwrap textarea {
+	border: 1px #F4E6F4 solid;
+	@include fn-border-radius(0);
+}
+
+.form-control {
+  background-color: $grey-hell;
+  background-image: none;
+  @include fn-border-radius(0 px);
+}
+.form-control:focus {
+  border-color: rgb(226, 227, 236);
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(144,5,145,.1), 0 0 8px rgba(19, 39, 212, 0.6);
+          box-shadow: inset 0 1px 1px rgba(144,5,145,.1), 0 0 8px rgba(19, 39, 212, 0.6);
+}
+
+// Texte und Inhalt Placeholder
+.form-control::-moz-placeholder {
+  color: $blau-stark;
+  opacity: 0.5;
+}
+.form-control:-ms-input-placeholder {
+  color: $blau-stark;
+  opacity: 0.5;
+}
+.form-control::-webkit-input-placeholder {
+  color: $blau-stark;
+  opacity: 0.5;
+}
+
+.tx-powermail {
+  .powermail_fieldset {
+    .powermail_field_error, 
+    .parsley-error, 
+    .powermail_form .parsley-error:focus, 
+    div.error {
+      background-color: $kontakt-hell;
+      color: $blau-stark;
+    }
+    .parsley-errors-list > li {
+      //background-color: $blau-stark;
+      color: $kontakt-hell;
+    }
+  }
+}
+
+// Errors (Parsley)
+
+#main .powermail_fieldset .row {
+  margin-bottom: 15px;
+
+  .control-label {
+      margin-bottom: 5px;
+  }
+}
+
+#main ul.parsley-errors-list {
+  list-style-type: none;
+  border: none;
+  background-color: #fff;
+
+  li.parsley-required,
+  li.parsley-custom-error-message {
+      color: #d00;
+  }
+}
+
+#main .tx-powermail .powermail_fieldset .powermail_field_error, 
+#main .tx-powermail .powermail_fieldset .parsley-error, 
+#main .tx-powermail .powermail_fieldset .powermail_form .parsley-error:focus, 
+#main .tx-powermail .powermail_fieldset div.error {
+  background-color: #eee;
+  color: #d00;
+}
