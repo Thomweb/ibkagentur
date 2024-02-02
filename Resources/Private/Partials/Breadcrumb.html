@@ -1,3 +1,5 @@
+<f:variable name="menuItemCounter">0</f:variable>
+
 <div class="row navigation-breadcrumb">
     <div class="col-12 col-sm-12 col-md-12 col-breadcrumb">
         <a href="#" class="bread-navigation-open" title="Parallel Navigation öffnen">
@@ -42,6 +44,9 @@
                     </f:if>
 
                     <meta itemprop="position" content="{breadIteration.cycle}"/>
+
+                    <f:variable name="menuItemCounter">{breadIteration.cycle}</f:variable>
+
                 </span>
             </f:for>
 
@@ -49,10 +54,9 @@
                 <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                     <i class="fas fa-angle-right"></i>
                     <span class="bread_link_small" itemprop="name">{blogPostTitle}</span>
-                    <meta itemprop="position" content="{breadIteration.cycle}"/>
+                    <meta itemprop="position" content="{menuItemCounter + 1}"/>
                 </span>
            </f:if>
-
 
         </span>
     </div>

@@ -18,7 +18,7 @@
     </f:if>
     <!-- Suche Ende -->
 
-    <f:render partial="Navigation-Megamenu5-listing" arguments="{headerMenu: headerMenu}" />
+      <f:render partial="Navigation-Megamenu5-listing" arguments="{headerMenu: headerMenu}" />
 
     <f:if condition="{0:data.uid} != {0:'2'}">
       <f:render partial="Breadcrumb" arguments="{breadMenu: breadMenu, blogPostTitle: blogPostTitle}" />
@@ -46,7 +46,6 @@
     </aside>
   </f:if>
   <!-- Blog Ende -->
-
 
   <footer id="footer">
     <f:render partial="Footer" arguments="{footerMenu: footerMenu}" />  
