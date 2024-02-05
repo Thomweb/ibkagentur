@@ -44,7 +44,9 @@ class Breadcrumb implements DataProcessorInterface
         $blogUid = 0;
         $blogTitel = '';
 
+
         array_key_exists('tx_ibkblog_blog', $_GET) ? $blogUid = intval($_GET['tx_ibkblog_blog']['bloguid']) : 0;
+        //array_key_exists('bloguid', $_GET) ? $blogUid = intval($_GET['tx_ibkblog_blog']['bloguid']) : 0;
 
         if ($blogUid > 0) {
             $blog = $this->blogRepository->findByUid($blogUid);

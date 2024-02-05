@@ -4577,6 +4577,18 @@ a.white:hover {
   background-color: #275ba4;
 }
 
+.navbar-toggler {
+  border: 1px #a4c2ed ridge;
+  transform: rotate(90deg);
+  transition: all ease 0.5s;
+  padding: 5px 8px;
+}
+.navbar-toggler.collapsed {
+  border: 1px #729ebd groove;
+  transform: rotate(0deg);
+  transition: all ease 0.5s;
+}
+
 .has-megamenu {
   position: static;
 }
@@ -4773,8 +4785,13 @@ a.bread_link_small:hover {
   padding: 10px 0 10px 30px;
   position: relative;
 }
+.bread-navigation-open .bread-navigation-plus,
+.bread-navigation-open .bread-navigation-minus,
 .bread-navigation-open i.fas,
+.bread-navigation-close .bread-navigation-plus,
+.bread-navigation-close .bread-navigation-minus,
 .bread-navigation-close i.fas {
+  color: #275ba4;
   position: absolute;
   font-size: 24px;
   left: 0;
@@ -4853,10 +4870,10 @@ a.bread_link_small:hover {
 }
 #reiter > ul > li {
   position: relative;
-  padding: 5px 10px;
+  padding: 3px 9px 5px 9px;
   height: 40px;
   width: 40px;
-  background-color: rgba(114, 158, 189, 0.7);
+  background-color: #275ba4;
   border-right: 1px #eee solid;
   border-bottom: 1px #eee solid;
   color: #275ba4;

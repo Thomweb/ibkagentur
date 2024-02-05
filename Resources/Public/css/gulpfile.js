@@ -7,10 +7,11 @@ const gulp = require('gulp');
 const sass = require('gulp-sass')(require('sass'));
 const babel = require('gulp-babel');
 const minify = require('gulp-minify');
-const uglify = require('gulp-uglify');
+const cleanCss = require('gulp-clean-css');
 
+var uglify = require('gulp-uglify');
+// var sassGlob = require('gulp-sass-glob');
 var concat = require('gulp-concat');
-var sassGlob = require('gulp-sass-glob');
 
 function buildAgenturCSS(cb) {
   return src('./../lib/bootstrap-5.3.2/scss/bootstrap.scss')
@@ -21,11 +22,12 @@ function buildAgenturCSS(cb) {
               './../scss/ibkcontent.scss'
           ]
       ))
-    .pipe(sassGlob())
-    .pipe(minify())
+
     .pipe(sass().on('error', sass.logError))
     .pipe(concat('ibkstyles.css'))
-    .pipe(dest('./../css')); 
+    .pipe(dest('./../css'));
+
+
 }
 
 function buildAgenturJS(cb) {

@@ -1,4 +1,20 @@
-// Bootstrap 4 Mega Menu
+// Bootstrap 5 Mega Menu
+
+.navbar-toggler {
+  border: 1px $blau-hover ridge;
+  transform: rotate(90deg);
+  transition: all ease 0.5s;
+  padding: 5px 8px;
+
+  &.collapsed {
+    border: 1px $blau-leicht groove;
+    transform: rotate(0deg);
+    transition: all ease 0.5s;
+
+  }
+}
+
+//collapsed
 
 .has-megamenu {
 	position: static;
@@ -180,7 +196,10 @@ a.bread_link_small:hover {
 .bread-navigation-close {
   padding: 10px 0 10px 30px;
   position: relative;
+  .bread-navigation-plus,
+  .bread-navigation-minus,
   i.fas {
+    color: $blau-stark;
     position: absolute;
     font-size: 24px;
     left: 0;
@@ -281,10 +300,12 @@ a.bread_link_small:hover {
   > ul {
     > li {
       position: relative;
-      padding: 5px 10px;
+      //padding: 4px 10px 6px 10px;
+      padding: 3px 9px 5px 9px;
       height: 40px;
       width: 40px;
-      background-color: rgba(114, 158, 189, 0.7);
+      //background-color: rgba(114, 158, 189, 0.7);
+      background-color: $blau-stark;
       border-right: 1px #eee solid;
       border-bottom: 1px #eee solid;
       color: $blau-stark;
