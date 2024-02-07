@@ -41,17 +41,16 @@ class Breadcrumb implements DataProcessorInterface
      */
     public function process(ContentObjectRenderer $cObj, array $contentObjectConfiguration, array $processorConfiguration, array $processedData): array
     {
-        $blogUid = 0;
-        $blogTitel = '';
 
+        if (array_key_exists('tx_ibkblog_blog', $_GET)) {
+            $arrayBlogTemp = $_GET['tx_ibkblog_blog'];
 
-        array_key_exists('tx_ibkblog_blog', $_GET) ? $blogUid = intval($_GET['tx_ibkblog_blog']['bloguid']) : 0;
-        //array_key_exists('bloguid', $_GET) ? $blogUid = intval($_GET['tx_ibkblog_blog']['bloguid']) : 0;
-
-        if ($blogUid > 0) {
-            $blog = $this->blogRepository->findByUid($blogUid);
-            $blogTitel = $blog->getTitel();
-            $processedData['blogPostTitle'] = $blogTitel;
+            if (array_key_exists('bloguid', $arrayBlogTemp)) {
+                $blogUid = $arrayBlogTemp['bloguid'];
+                $blog = $this->blogRepository->findByUid($blogUid);
+                $blogTitel = $blog->getTitel();
+                $processedData['blogPostTitle'] = $blogTitel;
+            }
         }
 
         return $processedData;

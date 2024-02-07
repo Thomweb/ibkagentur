@@ -22,17 +22,6 @@ config {
     #spamProtectEmailAddresses = 2
     #spamProtectEmailAddresses_atSubst = (at)
 
-    headerComment (
-Diese Webseite ist von der Internetagentur Irma Berscheid-Kimeridze erstellt worden.
-TYPO3, TypoScript, PHP, HTML, CSS, jQuery, JavaScript, MySQL: Thomas Berscheid
-Alle Texte:   Thomas Berscheid, Irma Berscheid-Kimeridze
-Web:          www.agentur-ibk.de
-Tel:          0221/7327201
-Fax:          0221/7327202
-
-Danke fuer Ihren Blick in unseren Quelltext!
-
-    )  
 }
 
 

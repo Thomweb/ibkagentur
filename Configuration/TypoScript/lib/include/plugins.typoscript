@@ -55,6 +55,7 @@ plugin.tx_seo {
                         table = tx_ibkblog_domain_model_blog
                         sortField = tstamp
                         lastModifiedField = tstamp
+                        template = Blogsitemap.xml
                         recursive = 0
                         pid = 49 #Speicherort der Beiträge
                         url {
@@ -66,7 +67,7 @@ plugin.tx_seo {
                                 tx_ibkblog_blog.controller = Blog
                                 tx_ibkblog_blog.action = show
                             }
-                            useCacheHash = 1
+                            useCacheHash = 0
                         }
                     }
                 }

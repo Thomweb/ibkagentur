@@ -42,7 +42,7 @@
 
 .blog-titel {
   margin-top: -10px;
-  margin-bottom: 15px;
+  //margin-bottom: 15px;
 }
 .blog-titel > div {
   padding: 5px 15px;
@@ -52,6 +52,10 @@
   margin-top: 5px;
 }
 
+.blog-content {
+  margin-bottom: 15px;
+}
+
 .blog_kurzfassung {
   color: $blau-stark;
 }
@@ -59,6 +63,24 @@
 .blog-toggle, 
 .blog-toggle-close {
   display: none;
+}
+
+
+#main {
+  .blog-new-posts {
+    ul {
+      padding-left: 1rem;
+
+      li {
+        list-style-type: "» ";
+
+        a {
+          line-height: 20px;
+          padding: 3px 0;
+        }
+      }
+    }
+  }
 }
 
 #bloggrid {
