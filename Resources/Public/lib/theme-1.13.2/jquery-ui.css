@@ -40,9 +40,11 @@
 	font-size: 100%;
 }
 .ui-accordion .ui-accordion-content {
-	padding: 1em 2.2em;
-	border-top: 0;
+	padding: 1em 1.2em;
 	overflow: auto;
+	border: 1px #729ebd solid;
+	border-top: 0;
+	background: #e8eff9;
 }
 
 

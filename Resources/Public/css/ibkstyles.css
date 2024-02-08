@@ -2942,9 +2942,11 @@ progress {
 }
 
 .ui-accordion .ui-accordion-content {
-  padding: 1em 2.2em;
-  border-top: 0;
+  padding: 1em 1.2em;
   overflow: auto;
+  border: 1px #729ebd solid;
+  border-top: 0;
+  background: #e8eff9;
 }
 
 /* Interaction states
@@ -4539,6 +4541,7 @@ blockquote p {
   background-color: #afc9ec;
   margin-top: -18px;
   color: #0b2954;
+  border: 1px #fff solid;
 }
 
 .button-accordion {

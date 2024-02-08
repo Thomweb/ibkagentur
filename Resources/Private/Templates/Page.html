@@ -74,7 +74,14 @@
       <div class="col-12 col-sm-12 col-md-12 row-author">
         <div class="div-author">
           <i class="far fa-keyboard"></i> <span itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">{data.author}</span></span>
-          <i class="far fa-clock"></i> <span itemprop="datePublished" content="<f:format.date format="d.m.Y">{data.SYS_LASTCHANGED}</f:format.date>"><f:format.date format="d.m.Y">{data.SYS_LASTCHANGED}</f:format.date></span>
+          <i class="far fa-clock"></i>
+          <time
+                  itemprop="datePublished"
+                  datetime="{data.SYS_LASTCHANGED -> f:format.date(format: 'c')}">
+            {data.SYS_LASTCHANGED -> f:format.date(format: 'd.m.Y')}
+          </time>
+
+
         </div>
       </div>
     </div> 

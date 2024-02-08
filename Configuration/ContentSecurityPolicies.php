@@ -24,12 +24,12 @@ return Map::fromEntries([
         ),
 
         // Optionen für Bilder
-        new Mutation(
-            MutationMode::Extend,
-            Directive::ImgSrc,
-            SourceScheme::data,
-            new UriValue('https://test.agentur-ibk.de')
-        ),
+//        new Mutation(
+//            MutationMode::Extend,
+//            Directive::ImgSrc,
+//            SourceScheme::data,
+//            new UriValue('https://test.agentur-ibk.de')
+//        ),
         new Mutation(
             MutationMode::Extend,
             Directive::ImgSrc,
@@ -86,12 +86,12 @@ return Map::fromEntries([
             new UriValue('http://localhost.agentur2020')
         ),
 
-        new Mutation(
-            MutationMode::Extend,
-            Directive::ScriptSrc,
-            SourceScheme::data,
-            new UriValue('https://test.agentur-ibk.de')
-        ),
+//        new Mutation(
+//            MutationMode::Extend,
+//            Directive::ScriptSrc,
+//            SourceScheme::data,
+//            new UriValue('https://test.agentur-ibk.de')
+//        ),
         new Mutation(
             MutationMode::Extend,
             Directive::ScriptSrc,
@@ -101,12 +101,12 @@ return Map::fromEntries([
 
 
         // Optionen für Script Source Elements
-        new Mutation(
-            MutationMode::Extend,
-            Directive::ScriptSrcElem,
-            SourceScheme::data,
-            new UriValue('https://test.agentur-ibk.de')
-        ),
+//        new Mutation(
+//            MutationMode::Extend,
+//            Directive::ScriptSrcElem,
+//            SourceScheme::data,
+//            new UriValue('https://test.agentur-ibk.de')
+//        ),
         new Mutation(
             MutationMode::Extend,
             Directive::ScriptSrcElem,

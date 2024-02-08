@@ -1,9 +1,7 @@
 
 <f:render partial="Assets" arguments="{uid: data.uid}" />
 
-<div itemscope itemtype="https://schema.org/WebApplication" class="container-fluid">
-
-  <div class="hidden" itemprop="name">{page_title}</div>
+<div class="container-fluid">
 
   <!-- Header Anfang -->
   <header id="header">  
@@ -26,19 +24,29 @@
 
   </header>  
   <!-- Header Ende -->
+</div>
 
+<div itemscope itemtype="https://schema.org/Article" class="container-fluid">
   <!-- Inhalt Anfang -->
   <main id="main">
     <f:render section="content" />
+    <div class="hidden" itemprop="name">
+      <span class="hidden" itemprop="headline">{page_title}</span>
+      <span class="hidden" itemprop="name">{page_title}</span>
+    </div>
   </main>
   <!-- Inhalt Ende -->
+</div>
 
+<div class="container-fluid">
   <!-- Georgisches Lehrbuch Anfang -->
   <aside id="aside-tutorial">
     <f:render section="geolingua" />
   </aside>
 <!-- Georgisches Lehrbuch Ende -->
+</div>
 
+<div class="container-fluid">
   <!-- Blog Anfang -->
   <f:if condition="{0:data.uid} != {0:'75'}">
     <aside id="aside-blogbottom">
@@ -46,7 +54,9 @@
     </aside>
   </f:if>
   <!-- Blog Ende -->
+</div>
 
+<div class="container-fluid">
   <footer id="footer">
     <f:render partial="Footer" arguments="{footerMenu: footerMenu}" />  
   </footer>
@@ -54,7 +64,6 @@
   <nav id="bottom">
     <f:render partial="Bottom" arguments="{bottomMenu: bottomMenu}" />  
   </nav>
-
 
   <div id="reiter">
     <f:render partial="Reiter" />  
