@@ -4631,42 +4631,11 @@ footer > div.row > div.col-md-3 {
   margin-bottom: 15px;
 }
 
-#footer .col-md-4 a.bread_link_small {
-  line-height: 30px;
-  padding: 5px 5px 5px 0;
+#footer ul {
+  padding-left: 0;
 }
-
-form > fieldset > div > div > label {
-  text-align: left !important;
-}
-
-@media (max-width: 900px) {
-  .form-contact-content {
-    margin: 0px 0px 5px 0px;
-    clear: both;
-    float: left;
-  }
-}
-@media (min-width: 901px) {
-  .form-contact-content {
-    margin: 0px 0px 5px 150px;
-    clear: none;
-  }
-}
-.form-contact-line {
-  width: 540px;
-  clear: both;
-  margin: 2px 0px;
-}
-
-.form-contact-title, .form-title {
-  width: 140px;
-  float: left;
-  margin: 0px 0px 5px 0px;
-}
-
-.form-contact-content {
-  width: 300px;
+#footer ul li {
+  list-style-type: none;
 }
 
 .red {

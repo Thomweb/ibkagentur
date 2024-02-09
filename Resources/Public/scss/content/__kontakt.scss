@@ -105,3 +105,37 @@ input.btn.btn-primary:hover {
   background-color: #eee;
   color: #d00;
 }
+
+
+// Kontaktformular
+
+form > fieldset > div > div > label {
+  text-align: left !important;
+}
+
+@media(max-width:900px) {
+  .form-contact-content {
+    margin: 0px 0px 5px 0px;
+    clear: both;
+    float: left;
+  }
+}
+@media(min-width:901px) {
+  .form-contact-content {
+    margin: 0px 0px 5px 150px;
+    clear: none;
+  }
+}
+.form-contact-line {
+  width: 540px;
+  clear: both;
+  margin: 2px 0px;
+}
+.form-contact-title, .form-title {
+  width: 140px;
+  float: left;
+  margin: 0px 0px 5px 0px;
+}
+.form-contact-content {
+  width: 300px;
+}

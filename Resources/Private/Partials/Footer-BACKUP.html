@@ -9,53 +9,26 @@
 <div class="row">
   <div class="col-12 col-md-4">
     <strong>In dieser Seite</strong>
-
-    <ul>
-      <f:for each="{footerMenu}" as="footerMenuItem">
-        <li>
-          <f:link.page pageUid="{footerMenuItem.data.uid}" title="{footerMenuItem.title}" class="bread_link_small">{footerMenuItem.data.title}</f:link.page>
-        </li>
-      </f:for>
-    </ul>
+    
+    <f:for each="{footerMenu}" as="footerMenuItem">
+      <br /><f:link.page pageUid="{footerMenuItem.data.uid}" title="{footerMenuItem.title}" class="bread_link_small">{footerMenuItem.data.title}</f:link.page>
+    </f:for>
   
   </div>
   <div class="col-12 col-md-4">
     <strong>Webseiten TYPO3</strong>
-
-    <ul>
-      <li>
-        <a class="bread_link_small" rel="noopener noreferrer" href="https://www.agentur-ibk.de/" target="_blank" title="Agentur für TYPO3 und Wordpress Köln ✔ SEO ✔ Tutorial"><i class="fab fa-typo3"></i> Agentur IBK</a>
-      </li>
-      <li>
-        <a class="bread_link_small" rel="noopener noreferrer" href="https://www.georgienseite.de/" target="_blank" title="Die Georgienseite: Informationen über Georgien - Land und Leute, Reisen, Reiseberichte von Thomas Berscheid. Essen und Trinken, georgische Rezepte und georgischer Wein - Powered by TYPO3"><i class="fab fa-typo3"></i> Die Georgienseite</a>
-      </li>
-    </ul>
+    <br /><a class="bread_link_small" rel="noopener noreferrer" href="https://www.agentur-ibk.de/" target="_blank" title="Agentur für TYPO3 und Wordpress Köln ✔ SEO ✔ Tutorial"><i class="fab fa-typo3"></i> Agentur IBK</a> 
+    <br /><a class="bread_link_small" rel="noopener noreferrer" href="https://www.georgienseite.de/" target="_blank" title="Die Georgienseite: Informationen über Georgien - Land und Leute, Reisen, Reiseberichte von Thomas Berscheid. Essen und Trinken, georgische Rezepte und georgischer Wein - Powered by TYPO3"><i class="fab fa-typo3"></i> Die Georgienseite</a> 
   </div>
   <div class="col-12 col-md-4">
     <strong>Webseiten Wordpress und PHP</strong>
-    <ul>
-      <li>
-        <a class="bread_link_small" rel="noopener noreferrer" href="https://www.georgisch.com" target="_blank" title="Georgisch Dolmetschen und georgisch Übersetzen: Übersetzerin und Dolmetscherin für die georgische Sprache in Köln und NRW: Irma Berscheid-Kimeridze - Powered by WordPress"><i class="fab fa-wordpress"></i> Georgisch.Com</a>
-      </li>
-      <li>
-        <a class="bread_link_small" rel="noopener noreferrer" href="https://georgisch-lernen.de/" target="_blank" title="GeoLingua - Georgisch lernen • georgische Sprache • Schrift • Georgien • Georgisch-Kurs • Literatur • Alphabet - Powered by WordPress"><i class="fab fa-wordpress"></i> Georgisch Lernen</a>
-      </li>
-      <li>
-        <a class="bread_link_small" rel="noopener noreferrer" href="https://wiki.agentur-ibk.de/doku.php" target="_blank" title="Sourcen, Quellcode und Code Snippets zu TYPO3. Responsive Webseiten mit Bootstrap. TypoScript, CSS, HTML, jQuery und JavaScript von Thomas Berscheid"><i class="fab fa-wikipedia-w"></i> Wiki der Agentur</a>
-      </li>
-      <li>
-        <a class="bread_link_small" rel="noopener noreferrer" href="https://www.georgien.net/" target="_blank" title="Georgien.net: Tourismus in Georgien ✔ Tbilissi ✔ georgische Küche ✔ Kultur"><i class="fab fa-wordpress"></i> Tourismus in Georgien</a>
-      </li>
-      <li>
-        <a class="bread_link_small" rel="noopener noreferrer" href="https://www.geoweinland.de/" target="_blank" title="Weinland Georgien: Informationen und Nachrichten zu georgischem Wein"><i class="fab fa-wordpress"></i> Weinland Georgien</a>
-      </li>
-      <li>
-        <a class="bread_link_small" rel="noopener noreferrer" href="https://www.geokulinarium.de/" target="_blank" title="GeoKulinarium: georgische Küche und Rezepte aus Georgien"><i class="fab fa-wordpress"></i> GeoKulinarium</a>
-      </li>
-      <li>
-        <a class="bread_link_small" rel="noopener noreferrer" href="https://www.thomweb.de" target="_blank" title="Thomas Berscheid: Krimis und Romane des Schriftstellers"><i class="fab fa-wordpress"></i> Thomweb.de</a>
-      </li>
-    </ul>
+    <br /><a class="bread_link_small" rel="noopener noreferrer" href="https://www.georgisch.com" target="_blank" title="Georgisch Dolmetschen und georgisch Übersetzen: Übersetzerin und Dolmetscherin für die georgische Sprache in Köln und NRW: Irma Berscheid-Kimeridze - Powered by WordPress"><i class="fab fa-wordpress"></i> Georgisch.Com</a>     
+    <br /><a class="bread_link_small" rel="noopener noreferrer" href="https://georgisch-lernen.de/" target="_blank" title="GeoLingua - Georgisch lernen • georgische Sprache • Schrift • Georgien • Georgisch-Kurs • Literatur • Alphabet - Powered by WordPress"><i class="fab fa-wordpress"></i> Georgisch Lernen</a>         
+    <br /><a class="bread_link_small" rel="noopener noreferrer" href="https://wiki.agentur-ibk.de/doku.php" target="_blank" title="Sourcen, Quellcode und Code Snippets zu TYPO3. Responsive Webseiten mit Bootstrap. TypoScript, CSS, HTML, jQuery und JavaScript von Thomas Berscheid"><i class="fab fa-wikipedia-w"></i> Wiki der Agentur</a>     
+    <br /><a class="bread_link_small" rel="noopener noreferrer" href="https://www.georgien.net/" target="_blank" title="Georgien.net: Tourismus in Georgien ✔ Tbilissi ✔ georgische Küche ✔ Kultur"><i class="fab fa-wordpress"></i> Tourismus in Georgien</a>     
+    <br /><a class="bread_link_small" rel="noopener noreferrer" href="https://www.geoweinland.de/" target="_blank" title="Weinland Georgien: Informationen und Nachrichten zu georgischem Wein"><i class="fab fa-wordpress"></i> Weinland Georgien</a>     
+    <br /><a class="bread_link_small" rel="noopener noreferrer" href="https://www.geokulinarium.de/" target="_blank" title="GeoKulinarium: georgische Küche und Rezepte aus Georgien"><i class="fab fa-wordpress"></i> GeoKulinarium</a>     
+    <br /><a class="bread_link_small" rel="noopener noreferrer" href="https://www.thomweb.de" target="_blank" title="Thomas Berscheid: Krimis und Romane des Schriftstellers"><i class="fab fa-wordpress"></i> Thomweb.de</a> 
   </div>
 </div>
 
