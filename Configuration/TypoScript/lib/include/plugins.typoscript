@@ -50,15 +50,15 @@ plugin.tx_seo {
         xmlSitemap {
             sitemaps {
                 ibkblog {
-                    provider = TYPO3\CMS\Seo\XmlSitemap\RecordsXmlSitemapDataProvider
+                    provider = Ibk\Ibkblog\Seo\BlogXmlSitemapDataProvider
                     config {
                         table = tx_ibkblog_domain_model_blog
                         sortField = tstamp
                         lastModifiedField = tstamp
-                        template = Blogsitemap.xml
                         recursive = 0
                         pid = 49 #Speicherort der Beiträge
                         url {
+                            pageSlug = blog
                             pageId = 75 #PageID der Detailseite
                             fieldToParameterMap {
                                 uid = tx_ibkblog_blog[blog]
