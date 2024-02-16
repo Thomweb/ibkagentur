@@ -53,9 +53,7 @@ page.10 {
                     }
                     renderObj = IMAGE
                     renderObj {
-                        #file.import.data = file:current:publicUrl
                         file.import.data = file:current:originalUid
-                        #textPos = 17
                         titleText.data = file:current:title
                         altText.data = file:current:alternative
                         params = class="img-accordion"
