@@ -1,5 +1,5 @@
 config {
-    contentObjectExceptionHandler = 0
+    #contentObjectExceptionHandler = 0
     
     xmlprologue        = none
     uniqueLinkVars      = 1

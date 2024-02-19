@@ -1,5 +1,6 @@
 
 @import "EXT:ibkagentur/Configuration/TypoScript/ts/config.typoscript"
+@import "EXT:ibkagentur/Configuration/TypoScript/lib/include/settings.typoscript"
 
 options.clearCache.all = 1
 

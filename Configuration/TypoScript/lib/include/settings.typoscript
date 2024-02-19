@@ -1,0 +1,11 @@
+########################################
+### Settings for whole page          ###
+########################################
+
+plugin.tx_ibkagentur {
+    settings {
+        pages {
+            pageBuecherUID = {$plugin.tx_ibkagentur.settings.pages.pageBuecherUID}
+        }
+    }
+}

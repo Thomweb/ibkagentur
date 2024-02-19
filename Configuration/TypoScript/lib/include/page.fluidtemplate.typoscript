@@ -22,6 +22,9 @@ page.10 {
         page_bottom < styles.content.get
         page_bottom.select.where = colPos = 4
 
+        page_buecher_uid = TEXT
+        page_buecher_uid.value = {$plugin.tx_ibkagentur.settings.pages.pageBuecherUID}
+
         ## Accordion
         page_accordion = CONTENT
         page_accordion {

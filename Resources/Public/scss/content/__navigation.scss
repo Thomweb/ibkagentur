@@ -281,7 +281,8 @@ a.bread_link_small:hover {
 	position: fixed;
 	z-index: 1001;
 	left: 0;
-	top: 30vh;
+	top: calc(50vh - 100px);
+    //top: 35vh;
 	width: 40px;
     border-top: 1px #eee solid;
 
@@ -294,7 +295,6 @@ a.bread_link_small:hover {
     list-style-type: none;
     margin-left: -32px;
     width: 40px;
-
   }
 
   > ul {
