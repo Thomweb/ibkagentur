@@ -538,13 +538,21 @@ a.button-layer > p {
 .ui-accordion-content-active > p {
   margin-top: 10px;
 }
-
+#faqpage a,
 #accordion a {
   color: $blau-stark;
 }
+
+#faqpage .button-accordion {
+  margin-top: 15px;
+}
+
+
+#faqpage .button-accordion a,
 #accordion .button-accordion a {
   color: #eee;
 }
+#faqpage .button-accordion a:hover,
 #accordion .button-accordion a:hover {
   color: $blau-stark;
 }
@@ -594,6 +602,9 @@ footer > div.row > div.col-md-3 {
     li {
       list-style-type: none;
     }
+  }
+  img {
+    border-radius: 5px;
   }
 }
 

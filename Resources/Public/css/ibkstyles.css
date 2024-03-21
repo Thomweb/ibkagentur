@@ -4798,14 +4798,21 @@ a.button-layer > p {
   margin-top: 10px;
 }
 
+#faqpage a,
 #accordion a {
   color: #275ba4;
 }
 
+#faqpage .button-accordion {
+  margin-top: 15px;
+}
+
+#faqpage .button-accordion a,
 #accordion .button-accordion a {
   color: #eee;
 }
 
+#faqpage .button-accordion a:hover,
 #accordion .button-accordion a:hover {
   color: #275ba4;
 }
@@ -4852,6 +4859,9 @@ footer > div.row > div.col-md-3 {
 }
 #footer ul li {
   list-style-type: none;
+}
+#footer img {
+  border-radius: 5px;
 }
 
 .red {

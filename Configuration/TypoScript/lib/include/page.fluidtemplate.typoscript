@@ -176,7 +176,6 @@ page.10 {
                             }
                         }
 
-
                         fieldRequired = header_link
                         stdWrap.typolink.parameter.field = header_link
                         stdWrap.wrap = <div class="faq-bild">|</div>
@@ -193,6 +192,22 @@ page.10 {
                     field = tstamp
                     date = d.m.Y
                     wrap = <meta itemprop="datePublished" content="|">
+                }
+
+                65 = TEXT
+                65 {
+                    value.field = header
+                    stdWrap {
+                        fieldRequired = header_link
+                        typolink {
+                            parameter.field = header_link
+                            title.field = header
+                            ATagParams = class="button"
+                        }
+                    }
+                    value.field = subheader // header
+                    stdWrap.typolink.parameter.field = header_link // header
+                    stdWrap.wrap = <div class="button-accordion">|</div>
                 }
 
                 70 = TEXT
