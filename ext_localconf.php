@@ -35,4 +35,9 @@ $ibkTagManager->addProperty('profile:last_name', 'Berscheid');
 $ibkTagManager = GeneralUtility::makeInstance(MetaTagManagerRegistry::class)->getManagerForProperty('google-site-verification');
 $ibkTagManager->addProperty('google-site-verification', 'EYMrUD_U1heQDTvQu6S4jGyWT8VQ1bDfV55honDGQHQ');
 
-
+$iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Imaging\IconRegistry::class);
+$iconRegistry->registerIcon(
+    'ibkagentur-plugin-main',
+    \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
+    ['source' => 'EXT:ibkagentur/Resources/Public/Icons/Extension.svg']
+);
