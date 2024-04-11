@@ -290,9 +290,7 @@ a.bread_link_small:hover {
 	z-index: 1001;
 	left: 0;
 	top: calc(50vh - 100px);
-    //top: 35vh;
 	width: 40px;
-    border-top: 1px #eee solid;
 
     a.reiter-link {
       color: $blau-stark;
@@ -308,25 +306,25 @@ a.bread_link_small:hover {
   > ul {
     > li {
       position: relative;
-      //padding: 4px 10px 6px 10px;
       padding: 3px 9px 5px 9px;
+      margin-bottom: 5px;
       height: 40px;
       width: 40px;
-      //background-color: rgba(114, 158, 189, 0.7);
       background-color: $blau-stark;
-      border-right: 1px #eee solid;
-      border-bottom: 1px #eee solid;
+      border: 1px #eee solid;
+      border-left: none;
+      border-top-right-radius: 20px;
+      border-bottom-right-radius: 20px;
       color: $blau-stark;
       font-size: 1.2rem;
     }
 
     > li > ul > li {
       font-size: 0px;
-      height: 40px;
       width: 0;
       position: absolute;
       top: -1px;
-      margin-left: 30px;
+      margin-left: 39px;
       transition: all 0.7s;
     }
 
@@ -334,17 +332,22 @@ a.bread_link_small:hover {
       cursor: help;
       border-right: none;
       background-color: $blau-stark;
-      color: #fff; 
+      color: #fff;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
       transition: all ease 0.7s;
     }
 
     > li:hover ul > li {
       cursor: default;
-      padding: 8px;
+      padding: 7px;
+      margin-left: 20px;
       z-index: 1000;
-      min-height: 41px;
+      height: 40px;
       border: 1px #eee solid;
       border-left: none;
+      border-top-right-radius: 20px;
+      border-bottom-right-radius: 20px;
       background-color: $blau-stark;
       width: 400px;
       transition: all ease 1s;
@@ -364,6 +367,44 @@ a.bread_link_small:hover {
     }
   }
 }
+
+#navtotop {
+  position: fixed;
+  display: none;
+  background-color: $blau-stark;
+  z-index: 1001;
+  right: 0;
+  bottom: 50px;
+  width: 40px;
+  height: 40px;
+  border: 1px #eee solid;
+  border-right: none;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+
+  &:hover {
+    background-color: #eee;
+    border-color: $blau-stark;
+    transition: all ease 0.3s;
+  }
+
+  .fab,
+  .fas {
+    font-size: 2.0rem;
+    text-decoration: none;
+    color: #fff;
+    padding: 3px 5px;
+    transition: all ease 0.3s;
+    opacity: 0.8;
+
+    &:hover {
+      color: $blau-stark;
+      opacity: 1;
+      transition: all ease 0.3s;
+    }
+  }
+}
+
 
 // Navigation in Fliesstext (Section Menu)
 

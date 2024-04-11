@@ -37,12 +37,16 @@
 	position: relative;
 	margin: 2px 0 0 0;
 	padding: .5em .5em .5em .7em;
+	border-radius: 5px;
 	font-size: 100%;
 }
 .ui-accordion .ui-accordion-content {
-	padding: 1em 1.2em;
+	padding: 1.2em 1.2em 1em 1.2em;
+	margin-top: -5px;
 	overflow: auto;
 	border: 1px #729ebd solid;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
 	border-top: 0;
 	background: #e8eff9;
 }

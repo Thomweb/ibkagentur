@@ -399,6 +399,7 @@ blockquote {
   padding: 1rem 0.75rem;
   background: linear-gradient(90deg, $quote-start, $quote-end);
   box-shadow: 2px 2px 15px #ccc;
+  border-radius: 5px;
 }
 blockquote p {
   margin: 0;

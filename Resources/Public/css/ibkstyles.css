@@ -3153,13 +3153,17 @@ progress {
   position: relative;
   margin: 2px 0 0 0;
   padding: 0.5em 0.5em 0.5em 0.7em;
+  border-radius: 5px;
   font-size: 100%;
 }
 
 .ui-accordion .ui-accordion-content {
-  padding: 1em 1.2em;
+  padding: 1.2em 1.2em 1em 1.2em;
+  margin-top: -5px;
   overflow: auto;
   border: 1px #729ebd solid;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
   border-top: 0;
   background: #e8eff9;
 }
@@ -4677,6 +4681,7 @@ blockquote {
   padding: 1rem 0.75rem;
   background: linear-gradient(90deg, #d7e6f0, #e7edf1);
   box-shadow: 2px 2px 15px #ccc;
+  border-radius: 5px;
 }
 
 blockquote p {
@@ -5230,7 +5235,6 @@ a.bread_link_small:hover {
   left: 0;
   top: calc(50vh - 100px);
   width: 40px;
-  border-top: 1px #eee solid;
 }
 #reiter a.reiter-link {
   color: #275ba4;
@@ -5244,21 +5248,23 @@ a.bread_link_small:hover {
 #reiter > ul > li {
   position: relative;
   padding: 3px 9px 5px 9px;
+  margin-bottom: 5px;
   height: 40px;
   width: 40px;
   background-color: #275ba4;
-  border-right: 1px #eee solid;
-  border-bottom: 1px #eee solid;
+  border: 1px #eee solid;
+  border-left: none;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
   color: #275ba4;
   font-size: 1.2rem;
 }
 #reiter > ul > li > ul > li {
   font-size: 0px;
-  height: 40px;
   width: 0;
   position: absolute;
   top: -1px;
-  margin-left: 30px;
+  margin-left: 39px;
   transition: all 0.7s;
 }
 #reiter > ul > li:hover {
@@ -5266,15 +5272,20 @@ a.bread_link_small:hover {
   border-right: none;
   background-color: #275ba4;
   color: #fff;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
   transition: all ease 0.7s;
 }
 #reiter > ul > li:hover ul > li {
   cursor: default;
-  padding: 8px;
+  padding: 7px;
+  margin-left: 20px;
   z-index: 1000;
-  min-height: 41px;
+  height: 40px;
   border: 1px #eee solid;
   border-left: none;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
   background-color: #275ba4;
   width: 400px;
   transition: all ease 1s;
@@ -5289,6 +5300,41 @@ a.bread_link_small:hover {
   color: #fff;
   transition: all ease 0.5s;
   text-decoration: none;
+}
+
+#navtotop {
+  position: fixed;
+  display: none;
+  background-color: #275ba4;
+  z-index: 1001;
+  right: 0;
+  bottom: 50px;
+  width: 40px;
+  height: 40px;
+  border: 1px #eee solid;
+  border-right: none;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+#navtotop:hover {
+  background-color: #eee;
+  border-color: #275ba4;
+  transition: all ease 0.3s;
+}
+#navtotop .fab,
+#navtotop .fas {
+  font-size: 2rem;
+  text-decoration: none;
+  color: #fff;
+  padding: 3px 5px;
+  transition: all ease 0.3s;
+  opacity: 0.8;
+}
+#navtotop .fab:hover,
+#navtotop .fas:hover {
+  color: #275ba4;
+  opacity: 1;
+  transition: all ease 0.3s;
 }
 
 #main .frame-type-menu_section > ul {
@@ -5477,6 +5523,7 @@ a.bread_link_small:hover {
   padding: 10px 5px 40px 10px;
   background-color: #b7d4e8;
   box-shadow: 0px 0px 5px 1px #b7d4e8;
+  border-radius: 5px;
   transition: all ease 0.5s;
 }
 #bloggrid article.blog-grid-content:hover {
@@ -5580,10 +5627,10 @@ a.bread_link_small:hover {
 }
 #aside-tutorial .carousel-indicators button {
   background-color: #729ebd;
-  height: 12px;
-  width: 12px;
+  height: 16px;
+  width: 16px;
   border: 1px #729ebd solid;
-  border-radius: 6px;
+  border-radius: 5px;
   margin-left: 8px;
   opacity: 1;
 }
