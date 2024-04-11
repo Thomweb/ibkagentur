@@ -1,43 +1,31 @@
-// CSS Werbung Tutorial
+// CSS Werbung Berscheid Verlag
 
 #aside-tutorial {
-    //background-color: #ddd;
     border: none;
-    //padding-top: 15px;
+
+    #carouselBoxes {
+      border-right: 5px;
+    }
 
     @media (max-width: 575px) {
-      //padding-bottom: 45px;
 
       h4 {
         padding-top: 1rem;
       }
-      //.carousel-indicators {
-      //  margin-bottom: 0;
-      //  bottom: -40px;
-      //}
     }
     @media (min-width: 576px) {
-      //padding-bottom: 15px;
 
       h4 {
         padding-top: 0;
-      }
-      .carousel-indicators {
-        //padding-bottom: 15px;
-
       }
 
     }
 
     .carousel-inner {
-      //padding: 15px;
-      //margin-top: -15px;
-      //margin-bottom: -15px;
+      border-radius: 5px;
 
       .carousel-item {
         padding: 15px;
-        //margin-top: -15px;
-        //margin-bottom: -15px;
 
         &.carousel-item-verlag {
           background-color: #e0e0e0;
@@ -54,31 +42,38 @@
             background-position-x: right;
             background-position-y: center;
           }
-
-          //background-position-x: right;
-          //background-position-y: center;
         }
 
-        //background-color: #ccc;
-        //&.carousel-item-pilze {
-        //  background-color: #e8ddd2;
-        //}
-        //&.carousel-item-georgisch {
-        //  background-color: #cbf4f2;
-        //}
       }
     }
 
-    //.carousel-indicators {
-    //  button {
-    //    background-color: $blau-leicht;
-    //    height: 8px;
-    //    opacity: 1;
-    //
-    //    &.active {
-    //      background-color: $blau-stark;
-    //      opacity: 1;
-    //    }
-    //  }
-    //}
+    .carousel-indicators {
+      justify-content: flex-end;
+      margin-right: 15px;
+      margin-bottom: 15px;
+
+      button {
+        background-color: $blau-leicht;
+        height: 12px;
+        width: 12px;
+        border: 1px $blau-leicht solid;
+        border-radius: 6px;
+        margin-left: 8px;
+        opacity: 1;
+
+        &.active {
+          background-color: $blau-stark;
+          border: 1px $blau-stark solid;
+          opacity: 1;
+        }
+      }
+      @media (max-width: 575px) {
+        display: none;
+      }
+
+      @media (min-width: 576px) {
+        display: flex;
+      }
+
+    }
   }

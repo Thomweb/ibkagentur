@@ -32,14 +32,16 @@
 
 .nav-container {
   padding: 0;
+  border-radius: 9px;
 }
 
 #navbar > ul > li.nav-item.dropdown.has-megamenu > div {
-  @include fn-border-radius(0);
+  @include fn-border-radius(3px);
   background-color: #eee;
   border: 5px $blau-leicht solid;
   padding: 0;
   box-shadow: 0px 30px 30px -15px #333;
+  margin-top: -5px;
 }
 
 #navbar > ul > li.nav-item.dropdown.has-megamenu > div .row {
@@ -65,12 +67,16 @@
 nav.navbar {
   background-color: $blau-stark;
   border: none;
+  //border-radius: 0 0 5px 5px;
+  //-webkit-border-radius: 0 0 5px 5px;
+  //-webkit-border-bottom-left-radius: 5px;
+  //-webkit-border-bottom-right-radius: 5px;
   margin-top: 0px;
   margin-bottom: 0;
   min-height: 40px;
   padding-left: 15px;
   padding-right: 15px;
-  @include fn-border-radius(0 0 0 0);
+  @include fn-border-radius(0 0 5px 5px);
   @include fn-linear-gradient($blau-stark, $blau-leicht);
 }
 ul.nav.navbar-nav > li > a {
@@ -158,6 +164,8 @@ div#navbar.navbar-collapse.collapse > ul.nav.navbar-nav > li.dropdown.active > a
 // Breadcrumb Navigation
 .navigation-breadcrumb {
   font-size: 14px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 span.bread_link_small,
 a.bread_link_small  {

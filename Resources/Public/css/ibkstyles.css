@@ -4334,6 +4334,8 @@ main a:hover {
 
 .banner {
   font-size: 20px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 .banner span {
   text-shadow: 2px 2px 2px #729ebd;
@@ -4449,6 +4451,7 @@ aside > div.row,
 
 #header, #aside-blogtop, #aside-tutorial, #main, #aside-blogbottom, #footer {
   box-shadow: 0px 0px 10px 2px #222;
+  border-radius: 5px;
 }
 
 #aside-blogbottom h4 {
@@ -4460,9 +4463,6 @@ aside > div.row,
 }
 #header > div.banner, #header > div.navigation-banner {
   background-color: rgba(221, 221, 221, 0.7);
-}
-#header > div > div.navigation-top {
-  background-color: #fff;
 }
 #header > div.navigation-breadcrumb {
   background: #ddd;
@@ -4544,6 +4544,7 @@ div.ce-gallery figure > img,
 div.ce-gallery > div > div > figure > img,
 figure.image > img,
 .image-embed-item {
+  border-radius: 5px;
   float: right;
   margin: 0 0 0 5px;
   max-width: 100%;
@@ -4572,7 +4573,10 @@ figure.image > img,
   background-color: #d7e6f0;
   color: #275ba4;
   font-size: 0.9rem;
-  padding: 3px 5px;
+  padding: 10px 5px 5px 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  margin-top: -5px;
   font-weight: bold;
 }
 
@@ -4739,6 +4743,7 @@ blockquote p {
   color: #ddd;
   background-color: #275ba4;
   border: none;
+  border-radius: 5px;
   padding: 5px 10px;
   margin-right: 3px;
   transition: all ease 0.5s;
@@ -4972,17 +4977,19 @@ a.white:hover {
 
 .nav-container {
   padding: 0;
+  border-radius: 9px;
 }
 
 #navbar > ul > li.nav-item.dropdown.has-megamenu > div {
-  border-radius: 0;
-  -moz-border-radius: 0;
-  -webkit-border-radius: 0;
-  -ms-border-radius: 0;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -ms-border-radius: 3px;
   background-color: #eee;
   border: 5px #729ebd solid;
   padding: 0;
   box-shadow: 0px 30px 30px -15px #333;
+  margin-top: -5px;
 }
 
 #navbar > ul > li.nav-item.dropdown.has-megamenu > div .row {
@@ -5011,10 +5018,10 @@ nav.navbar {
   min-height: 40px;
   padding-left: 15px;
   padding-right: 15px;
-  border-radius: 0 0 0 0;
-  -moz-border-radius: 0 0 0 0;
-  -webkit-border-radius: 0 0 0 0;
-  -ms-border-radius: 0 0 0 0;
+  border-radius: 0 0 5px 5px;
+  -moz-border-radius: 0 0 5px 5px;
+  -webkit-border-radius: 0 0 5px 5px;
+  -ms-border-radius: 0 0 5px 5px;
   background: -webkit-linear-gradient(#275ba4, #729ebd);
   background: -o-linear-gradient(#275ba4, #729ebd);
   background: -moz-linear-gradient(#275ba4, #729ebd);
@@ -5109,6 +5116,8 @@ div#navbar.navbar-collapse.collapse > ul.nav.navbar-nav > li.dropdown.active > a
 
 .navigation-breadcrumb {
   font-size: 14px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
 span.bread_link_small,
@@ -5527,6 +5536,9 @@ a.bread_link_small:hover {
 #aside-tutorial {
   border: none;
 }
+#aside-tutorial #carouselBoxes {
+  border-right: 5px;
+}
 @media (max-width: 575px) {
   #aside-tutorial h4 {
     padding-top: 1rem;
@@ -5536,6 +5548,9 @@ a.bread_link_small:hover {
   #aside-tutorial h4 {
     padding-top: 0;
   }
+}
+#aside-tutorial .carousel-inner {
+  border-radius: 5px;
 }
 #aside-tutorial .carousel-inner .carousel-item {
   padding: 15px;
@@ -5556,5 +5571,34 @@ a.bread_link_small:hover {
   #aside-tutorial .carousel-inner .carousel-item.carousel-item-verlag {
     background-position-x: right;
     background-position-y: center;
+  }
+}
+#aside-tutorial .carousel-indicators {
+  justify-content: flex-end;
+  margin-right: 15px;
+  margin-bottom: 15px;
+}
+#aside-tutorial .carousel-indicators button {
+  background-color: #729ebd;
+  height: 12px;
+  width: 12px;
+  border: 1px #729ebd solid;
+  border-radius: 6px;
+  margin-left: 8px;
+  opacity: 1;
+}
+#aside-tutorial .carousel-indicators button.active {
+  background-color: #275ba4;
+  border: 1px #275ba4 solid;
+  opacity: 1;
+}
+@media (max-width: 575px) {
+  #aside-tutorial .carousel-indicators {
+    display: none;
+  }
+}
+@media (min-width: 576px) {
+  #aside-tutorial .carousel-indicators {
+    display: flex;
   }
 }

@@ -56,7 +56,9 @@ main a:hover {
 }
 
 .banner {
-  font-size: 20px;  
+  font-size: 20px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 
   span {
     @media (max-width: 399px) {
@@ -165,6 +167,7 @@ aside > div.row,
 
 #header, #aside-blogtop, #aside-tutorial, #main, #aside-blogbottom, #footer {
   box-shadow: 0px 0px 10px 2px #222;
+  border-radius: 5px;
 }
 
 #aside-blogbottom h4 {
@@ -183,12 +186,12 @@ aside > div.row,
       @include fn-background-grey(221, 0.7);
     }
 
-    > div.navigation-top {
-      background-color: #fff;
+    &.row.navigation-top {
+      //border: 1px #f0f solid;
+      //border-radius: 5px;
     }
 
     &.navigation-breadcrumb {
-      //@include fn-background-grey(221, 0.7);
       background: #ddd;
       padding-top: 0px;
       padding-bottom: 0px;
@@ -270,6 +273,7 @@ div.ce-gallery figure > img,
 div.ce-gallery > div > div > figure > img,
 figure.image > img,
 .image-embed-item {
+  border-radius: 5px;
   float: right;
   margin: 0 0 0 5px;
   max-width: 100%;
@@ -292,7 +296,10 @@ figure.image > img,
   background-color: $quote-start;
   color: $blau-stark;
   font-size: 0.9rem;
-  padding: 3px 5px;
+  padding: 10px 5px 5px 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  margin-top: -5px;
   font-weight: bold;
 }
 
@@ -479,6 +486,7 @@ blockquote p {
   color: #ddd;
   background-color: $blau-stark;
   border: none;
+  border-radius: 5px;
   padding: 5px 10px;
   margin-right: 3px;
   transition: all ease 0.5s;
