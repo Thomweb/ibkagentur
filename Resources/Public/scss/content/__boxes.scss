@@ -39,13 +39,33 @@
         //margin-top: -15px;
         //margin-bottom: -15px;
 
+        &.carousel-item-verlag {
+          background-color: #e0e0e0;
+          background-image: url("/typo3conf/ext/ibkagentur/Resources/Public/Icons/Slider/Logo-Berscheid-Verlag-700x700-50-sw.webp");
+          background-repeat: no-repeat;
+          background-size: contain;
+
+          @media (max-width: 575px) {
+            background-position-x: center;
+            background-position-y: bottom;
+          }
+
+          @media (min-width: 576px) {
+            background-position-x: right;
+            background-position-y: center;
+          }
+
+          //background-position-x: right;
+          //background-position-y: center;
+        }
+
         //background-color: #ccc;
-        &.carousel-item-pilze {
-          background-color: #e8ddd2;
-        }
-        &.carousel-item-georgisch {
-          background-color: #cbf4f2;
-        }
+        //&.carousel-item-pilze {
+        //  background-color: #e8ddd2;
+        //}
+        //&.carousel-item-georgisch {
+        //  background-color: #cbf4f2;
+        //}
       }
     }
 

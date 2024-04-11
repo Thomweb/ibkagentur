@@ -5540,9 +5540,21 @@ a.bread_link_small:hover {
 #aside-tutorial .carousel-inner .carousel-item {
   padding: 15px;
 }
-#aside-tutorial .carousel-inner .carousel-item.carousel-item-pilze {
-  background-color: #e8ddd2;
+#aside-tutorial .carousel-inner .carousel-item.carousel-item-verlag {
+  background-color: #e0e0e0;
+  background-image: url("/typo3conf/ext/ibkagentur/Resources/Public/Icons/Slider/Logo-Berscheid-Verlag-700x700-50-sw.webp");
+  background-repeat: no-repeat;
+  background-size: contain;
 }
-#aside-tutorial .carousel-inner .carousel-item.carousel-item-georgisch {
-  background-color: #cbf4f2;
+@media (max-width: 575px) {
+  #aside-tutorial .carousel-inner .carousel-item.carousel-item-verlag {
+    background-position-x: center;
+    background-position-y: bottom;
+  }
+}
+@media (min-width: 576px) {
+  #aside-tutorial .carousel-inner .carousel-item.carousel-item-verlag {
+    background-position-x: right;
+    background-position-y: center;
+  }
 }
