@@ -50,7 +50,7 @@ page {
       50 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
       50 {
         special = list
-        special.value = 72, 71, 277
+        special.value = 72, 71
         as = bottomMenu
         titleField = nav_title // title
       }

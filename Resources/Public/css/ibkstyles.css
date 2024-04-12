@@ -4487,7 +4487,6 @@ aside > div.row,
 
 #bottom {
   display: none;
-  background-color: rgba(225, 225, 225, 0.8);
   position: fixed;
   padding-top: 0;
   padding-bottom: 0;
@@ -4495,12 +4494,28 @@ aside > div.row,
   left: 0;
   right: 0;
   text-align: center;
-  box-shadow: 0px -5px 5px 0px rgba(225, 225, 225, 0.8);
 }
 #bottom > div {
   max-width: 830px;
   margin-left: auto;
   margin-right: auto;
+}
+#bottom > div > div {
+  display: flex;
+  justify-content: center;
+}
+#bottom > div > div .bottom-link a {
+  background-color: rgba(225, 225, 225, 0.8);
+  margin-left: 2px;
+  margin-right: 2px;
+  border: 1px #729ebd solid;
+  border-bottom: none;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+#bottom > div > div .bottom-link a:hover {
+  background-color: #275ba4;
+  color: #fff;
 }
 #bottom .fab,
 #bottom .fas {
@@ -5223,10 +5238,16 @@ a.bread_link_small:hover {
   #reiter {
     display: none;
   }
+  #cookiebanner {
+    display: block;
+  }
 }
 @media (min-width: 768px) {
   #reiter {
     display: block;
+  }
+  #cookiebanner {
+    display: none;
   }
 }
 #reiter {
@@ -5302,34 +5323,51 @@ a.bread_link_small:hover {
   text-decoration: none;
 }
 
+#cookiebanner {
+  left: 0;
+  border: 1px #eee solid;
+  border-left: none;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
 #navtotop {
-  position: fixed;
   display: none;
-  background-color: #275ba4;
-  z-index: 1001;
   right: 0;
-  bottom: 50px;
-  width: 40px;
-  height: 40px;
   border: 1px #eee solid;
   border-right: none;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
 }
+
+#cookiebanner,
+#navtotop {
+  position: fixed;
+  background-color: #275ba4;
+  z-index: 1001;
+  bottom: 50px;
+  width: 40px;
+  height: 40px;
+}
+#cookiebanner:hover,
 #navtotop:hover {
   background-color: #eee;
   border-color: #275ba4;
   transition: all ease 0.3s;
 }
+#cookiebanner .fab,
+#cookiebanner .fas,
 #navtotop .fab,
 #navtotop .fas {
   font-size: 2rem;
   text-decoration: none;
   color: #fff;
-  padding: 3px 5px;
+  padding: 3px;
   transition: all ease 0.3s;
   opacity: 0.8;
 }
+#cookiebanner .fab:hover,
+#cookiebanner .fas:hover,
 #navtotop .fab:hover,
 #navtotop .fas:hover {
   color: #275ba4;

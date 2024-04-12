@@ -2,10 +2,13 @@
 
 <div class="row">
     <div class="col-12 col-sm-12">
+        <div class="bottom-link">
 
-        <f:for each="{bottomMenu}" as="bottomMenuItem" iteration="bottomIteration">
-            <f:link.page pageUid="{bottomMenuItem.data.uid}" title="{bottomMenuItem.data.seo_title}" class="bread_link_small">{bottomMenuItem.data.title}</f:link.page><wbr>
-        </f:for>
+            <f:for each="{bottomMenu}" as="bottomMenuItem" iteration="bottomIteration">
+                <f:link.page pageUid="{bottomMenuItem.data.uid}" title="{bottomMenuItem.data.seo_title}" class="bread_link_small">{bottomMenuItem.data.title}</f:link.page><wbr>
+            </f:for>
+
+        </div>
 
     </div>
 </div>
