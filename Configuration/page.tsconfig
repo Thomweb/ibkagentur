@@ -1,0 +1,80 @@
+mod.web_layout.BackendLayouts {
+    ibkagentur {
+        title = Agentur
+        #icon = EXT:ibkagentur/Resources/Public/Images/BackendLayouts/default.gif
+        config {
+            backend_layout {
+                colCount = 2
+                rowCount = 7
+                rows {
+                    1 {
+                        columns {
+                            1 {
+                                name = Kasten mit Inhalt
+                                colspan = 2
+                                colPos = 1
+                            }
+                        }
+                    }
+                    2 {
+                        columns {
+                            1 {
+                                name = Ebookbild
+                                colPos = 10
+                            }
+                            2 {
+                                name = Ebooktext
+                                colPos = 11
+                            }
+                        }
+                    }
+                    3 {
+                        columns {
+                            1 {
+                                name = Bilderbuttons
+                                colspan = 2
+                                colPos = 2
+                            }
+                        }
+                    }
+                    4 {
+                        columns {
+                            1 {
+                                name = Accordions
+                                colspan = 2
+                                colPos = 93
+                            }
+                        }
+                    }
+                    5 {
+                        columns {
+                            1 {
+                                name = page bottom
+                                colspan = 2
+                                colPos = 4
+                            }
+                        }
+                    }
+                    6 {
+                        columns {
+                            1 {
+                                name = Blog Agentur IBK
+                                colspan = 2
+                                colPos = 5
+                            }
+                        }
+                    }
+                    7 {
+                        columns {
+                            1 {
+                                name = FAQ Content
+                                colspan = 2
+                                colPos = 6
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -22,6 +22,12 @@ page.10 {
         page_bottom < styles.content.get
         page_bottom.select.where = colPos = 4
 
+        ebook_bild < styles.content.get
+        ebook_bild.select.where = colPos = 10
+
+        ebook_text < styles.content.get
+        ebook_text.select.where = colPos = 11
+
         page_buecher_uid = TEXT
         page_buecher_uid.value = {$plugin.tx_ibkagentur.settings.pages.pageBuecherUID}
 

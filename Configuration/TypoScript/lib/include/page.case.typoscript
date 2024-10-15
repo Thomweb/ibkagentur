@@ -7,11 +7,11 @@ page.10.file.stdWrap.cObject {
     key.data = levelfield:-1, backend_layout_next_level, slide
     key.override.field = backend_layout
 
-    1 = TEXT
-    1.value = EXT:ibkagentur/Resources/Private/Templates/Page.html
+    pagets__1 = TEXT
+    pagets__1.value = EXT:ibkagentur/Resources/Private/Templates/Page.html
 
-    2 = TEXT
-    2.value = EXT:ibkagentur/Resources/Private/Templates/Faq.html
+    pagets__2 = TEXT
+    pagets__2.value = EXT:ibkagentur/Resources/Private/Templates/Faq.html
 
     default = TEXT
     default.value = EXT:ibkagentur/Resources/Private/Templates/Page.html
