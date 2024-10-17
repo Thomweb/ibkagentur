@@ -305,6 +305,10 @@ figure.image > img,
   height: auto;
 }
 
+.div-ebook figure {
+  margin-bottom: 15px;
+}
+
 .image-embed-item.img-left {
   filter: grayscale(0%) brightness(80%) opacity(80%);
   @include fn-border-radius(2px);
