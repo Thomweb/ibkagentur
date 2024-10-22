@@ -18,6 +18,7 @@ function buildAgenturCSS(cb) {
       .pipe(src(
           [
               './../lib/theme-1.13.2/jquery-ui.css',
+              './../lib/swiper/swiper-bundle.min.css',
               './../lib/cookie/cookie.css',
               './../css/ibkroot.css',
               './../scss/ibkcontent.scss'
@@ -37,6 +38,7 @@ function buildAgenturJS(cb) {
             [
                 './../lib/theme-1.13.2/jquery-ui.min.js',
                 './../lib/bootstrap-5.3.2/dist/js/bootstrap.bundle.min.js',
+                './../lib/swiper/swiper-bundle.min.js',
                 //'./../js/cookie.js',
                 './../js/ibkfunctions.js'
             ]

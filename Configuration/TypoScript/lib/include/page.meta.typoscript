@@ -3,6 +3,16 @@
 ########################################
 
 page {
+    ## CSS Files
+    includeCSS {
+        ## Font Awesome einschliessen
+        css10 = EXT:ibkagentur/Resources/Public/lib/fontawesome-5.14.0/css/all.min.css
+        css10.media = all
+
+        css20 = EXT:ibkagentur/Resources/Public/css/ibkstyles.css
+        css20.media = all
+    }
+
     ## HEADER Data
     headerData {
 

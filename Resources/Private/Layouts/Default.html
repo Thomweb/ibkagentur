@@ -26,6 +26,14 @@
   <!-- Header Ende -->
 </div>
 
+<div class="container-fluid">
+  <!-- Slider Bücher Anfang -->
+  <aside id="aside-buecher">
+    <f:render section="slider" />
+  </aside>
+  <!-- Slider Bücher Ende -->
+</div>
+
 <div itemscope itemtype="https://schema.org/Article" class="container-fluid">
   <!-- Inhalt Anfang -->
   <main id="main">
@@ -38,13 +46,15 @@
   <!-- Inhalt Ende -->
 </div>
 
-<div class="container-fluid">
-  <!-- Georgisches Lehrbuch Anfang -->
-  <aside id="aside-tutorial">
-    <f:render section="boxes" />
-  </aside>
-<!-- Georgisches Lehrbuch Ende -->
-</div>
+<f:comment>
+  <div class="container-fluid">
+    <!-- Georgisches Lehrbuch Anfang -->
+    <aside id="aside-tutorial">
+      <f:render section="boxes" />
+    </aside>
+  <!-- Georgisches Lehrbuch Ende -->
+  </div>
+</f:comment>
 
 <div class="container-fluid">
   <!-- Blog Anfang -->

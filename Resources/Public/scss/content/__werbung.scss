@@ -1,10 +1,11 @@
-// CSS Werbung Tutorial
+// CSS Werbung Bücher
 
-#aside-tutorial {
-    background-color: #ddd;
+#aside-buecher {
+  padding: 15px;
+    //background-color: #0f0;
     border: none;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    //padding-top: 15px;
+    //padding-bottom: 15px;
   }
   .schulung-titel {
     padding: 10px 15px;
@@ -32,4 +33,39 @@
     background-color: #fff;
     color: $orange-stark;
   }
-  
+
+
+// CSS Werbung Tutorial
+
+#aside-tutorial {
+  background-color: #ddd;
+  border: none;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.schulung-titel {
+  padding: 10px 15px;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.schulung-inhalt {
+  padding: 13px 15px 15px 10px;
+  background-color: #ddd;
+  transition: all ease 0.5s;
+}
+.schulung-inhalt:hover {
+  background-color: #666;
+  color: $orange-stark;
+  transition: all ease 0.5s;
+}
+
+.button.button-schulung {
+  background-color: $orange-stark;
+  box-shadow: none;
+  color: $orange-hell;
+  font-weight: bold;
+}
+.button.button-schulung:hover {
+  background-color: #fff;
+  color: $orange-stark;
+}

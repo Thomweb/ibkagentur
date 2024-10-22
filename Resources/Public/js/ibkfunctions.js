@@ -115,3 +115,28 @@ $(document).ready(function() {
     });
   });
 });
+
+// Swiper Bildergalerie
+const swiper = new Swiper('.swiper', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
+    slidesPerView: 4,
+    slidesPerGroup: 1,
+    spaceBetween: 15,
+    speed: 500,
+    autoplay: {
+        delay: 2000,
+    },
+
+    // If we need pagination
+    // pagination: {
+    //     el: '.swiper-pagination',
+    //     type: 'bullets',
+    // },
+    // Navigation arrows
+    // navigation: {
+    //     nextEl: '.swiper-button-next',
+    //     prevEl: '.swiper-button-prev',
+    // },
+});

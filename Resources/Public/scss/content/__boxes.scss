@@ -1,4 +1,29 @@
-// CSS Werbung Berscheid Verlag
+// CSS Werbung Berscheid Verlag 2024 (3 Bilder nebeneinander)
+
+#aside-buecher {
+  border: none;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: #eee;
+
+  #carouselBoxes {
+    border-right: 5px;
+  }
+
+  .carousel-inner {
+    border-radius: 5px;
+
+    .carousel-item {
+      padding: 15px;
+
+      &.carousel-item-verlag {
+        background-color: #e0e0e0;
+      }
+    }
+  }
+}
+
+// Werbung 2023 (breite Version, 1 Bild mit Text und Button)
 
 #aside-tutorial {
     border: none;

@@ -8,11 +8,17 @@
       </div>
 </f:section>
 
-<!-- Bücher Werbung ANFANG -->
+<!-- Bücher Slider 2024 ANFANG -->
+<f:section name="slider">
+  <f:render partial="Slider/Slider" arguments="{page_buecher_uid:page_buecher_uid}" />
+</f:section>
+<!-- Bücher Slider 2024 ENDE -->
+
+<!-- Bücher Slider 2023 ANFANG -->
 <f:section name="boxes">
   <f:render partial="Boxes/Boxes" arguments="{page_buecher_uid:page_buecher_uid}" />
 </f:section>
-<!-- Bücher Werbung ENDE -->
+<!-- Bücher Slider 2023 ENDE -->
 
 <f:section name="content">
   <f:if condition="{page_content}">
