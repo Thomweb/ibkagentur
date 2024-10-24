@@ -7,32 +7,86 @@
     //padding-top: 15px;
     //padding-bottom: 15px;
   }
-  .schulung-titel {
-    padding: 10px 15px;
-    font-size: 1.5rem;
-    font-weight: bold;
-  }
-  .schulung-inhalt {
-    padding: 13px 15px 15px 10px;
-    background-color: #ddd;
-    transition: all ease 0.5s;
-  }
-  .schulung-inhalt:hover {
-    background-color: #666;
-    color: $orange-stark;
-    transition: all ease 0.5s;
+
+// Werbung 2023 (breite Version, 1 Bild mit Text und Button)
+
+#aside-tutorial {
+  border: none;
+
+  #carouselBoxes {
+    border-right: 5px;
   }
 
-  .button.button-schulung {
-    background-color: $orange-stark;
-    box-shadow: none;
-    color: $orange-hell;
-    font-weight: bold;
+  @media (max-width: 575px) {
+
+    h4 {
+      padding-top: 1rem;
+    }
   }
-  .button.button-schulung:hover {
-    background-color: #fff;
-    color: $orange-stark;
+  @media (min-width: 576px) {
+
+    h4 {
+      padding-top: 0;
+    }
+
   }
+
+  .carousel-inner {
+    border-radius: 5px;
+
+    .carousel-item {
+      padding: 15px;
+
+      &.carousel-item-verlag {
+        background-color: #e0e0e0;
+        background-image: url("/typo3conf/ext/ibkagentur/Resources/Public/Icons/Slider/Logo-Berscheid-Verlag-700x700-50-sw.webp");
+        background-repeat: no-repeat;
+        background-size: contain;
+
+        @media (max-width: 575px) {
+          background-position-x: center;
+          background-position-y: bottom;
+        }
+
+        @media (min-width: 576px) {
+          background-position-x: right;
+          background-position-y: center;
+        }
+      }
+    }
+  }
+
+  .carousel-indicators {
+    justify-content: flex-end;
+    margin-right: 15px;
+    margin-bottom: 15px;
+
+    button {
+      background-color: $blau-leicht;
+      height: 16px;
+      width: 16px;
+      border: 1px $blau-leicht solid;
+      border-radius: 5px;
+      margin-left: 8px;
+      opacity: 1;
+
+      &.active {
+        background-color: $blau-stark;
+        border: 1px $blau-stark solid;
+        opacity: 1;
+      }
+    }
+    @media (max-width: 575px) {
+      display: none;
+    }
+
+    @media (min-width: 576px) {
+      display: flex;
+    }
+
+  }
+}
+
 
 
 // CSS Werbung Tutorial
@@ -43,29 +97,29 @@
   padding-top: 15px;
   padding-bottom: 15px;
 }
-.schulung-titel {
-  padding: 10px 15px;
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-.schulung-inhalt {
-  padding: 13px 15px 15px 10px;
-  background-color: #ddd;
-  transition: all ease 0.5s;
-}
-.schulung-inhalt:hover {
-  background-color: #666;
-  color: $orange-stark;
-  transition: all ease 0.5s;
-}
+//.schulung-titel {
+//  padding: 10px 15px;
+//  font-size: 1.5rem;
+//  font-weight: bold;
+//}
+//.schulung-inhalt {
+//  padding: 13px 15px 15px 10px;
+//  background-color: #ddd;
+//  transition: all ease 0.5s;
+//}
+//.schulung-inhalt:hover {
+//  background-color: #666;
+//  color: $orange-stark;
+//  transition: all ease 0.5s;
+//}
 
-.button.button-schulung {
-  background-color: $orange-stark;
-  box-shadow: none;
-  color: $orange-hell;
-  font-weight: bold;
-}
-.button.button-schulung:hover {
-  background-color: #fff;
-  color: $orange-stark;
-}
+//.button.button-schulung {
+//  background-color: $orange-stark;
+//  box-shadow: none;
+//  color: $orange-hell;
+//  font-weight: bold;
+//}
+//.button.button-schulung:hover {
+//  background-color: #fff;
+//  color: $orange-stark;
+//}

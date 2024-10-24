@@ -6366,85 +6366,9 @@ a.bread_link_small:hover {
   padding-bottom: 15px;
   background-color: #eee;
 }
-#aside-buecher #carouselBoxes {
-  border-right: 5px;
-}
-#aside-buecher .carousel-inner {
-  border-radius: 5px;
-}
-#aside-buecher .carousel-inner .carousel-item {
-  padding: 15px;
-}
-#aside-buecher .carousel-inner .carousel-item.carousel-item-verlag {
-  background-color: #e0e0e0;
-}
-
-#aside-tutorial {
-  border: none;
-}
-#aside-tutorial #carouselBoxes {
-  border-right: 5px;
-}
-@media (max-width: 575px) {
-  #aside-tutorial h4 {
-    padding-top: 1rem;
-  }
-}
-@media (min-width: 576px) {
-  #aside-tutorial h4 {
-    padding-top: 0;
-  }
-}
-#aside-tutorial .carousel-inner {
-  border-radius: 5px;
-}
-#aside-tutorial .carousel-inner .carousel-item {
-  padding: 15px;
-}
-#aside-tutorial .carousel-inner .carousel-item.carousel-item-verlag {
-  background-color: #e0e0e0;
-  background-image: url("/typo3conf/ext/ibkagentur/Resources/Public/Icons/Slider/Logo-Berscheid-Verlag-700x700-50-sw.webp");
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-@media (max-width: 575px) {
-  #aside-tutorial .carousel-inner .carousel-item.carousel-item-verlag {
-    background-position-x: center;
-    background-position-y: bottom;
-  }
-}
-@media (min-width: 576px) {
-  #aside-tutorial .carousel-inner .carousel-item.carousel-item-verlag {
-    background-position-x: right;
-    background-position-y: center;
-  }
-}
-#aside-tutorial .carousel-indicators {
-  justify-content: flex-end;
-  margin-right: 15px;
-  margin-bottom: 15px;
-}
-#aside-tutorial .carousel-indicators button {
-  background-color: #729ebd;
-  height: 16px;
-  width: 16px;
-  border: 1px #729ebd solid;
-  border-radius: 5px;
-  margin-left: 8px;
-  opacity: 1;
-}
-#aside-tutorial .carousel-indicators button.active {
-  background-color: #275ba4;
-  border: 1px #275ba4 solid;
-  opacity: 1;
-}
-@media (max-width: 575px) {
-  #aside-tutorial .carousel-indicators {
-    display: none;
-  }
-}
-@media (min-width: 576px) {
-  #aside-tutorial .carousel-indicators {
-    display: flex;
-  }
+#aside-buecher .button.button-verlag {
+  display: flow;
+  margin-top: 5px;
+  margin-right: 0;
+  text-align: center;
 }
