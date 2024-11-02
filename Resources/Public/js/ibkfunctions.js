@@ -121,9 +121,9 @@ const swiper = new Swiper('.swiper', {
     // Optional parameters
     direction: 'horizontal',
     loop: true,
-    slidesPerView: 1,
+    slidesPerView: 2,
     slidesPerGroup: 1,
-    spaceBetween: 0,
+    spaceBetween: 5,
 
     breakpoints: {
         400: {
