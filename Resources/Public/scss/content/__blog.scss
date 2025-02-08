@@ -141,6 +141,8 @@
         position: absolute;
         text-align: center;
         bottom: 10px;
+        padding-top: 12px;
+        padding-bottom: 12px;
 
         @media (max-width: 575px) {
           width: calc(100% - 24px);

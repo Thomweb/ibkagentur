@@ -98,7 +98,6 @@ a.fas,
 a.banner-search {
   text-decoration: none;
   color: $blau-stark;
-  //padding: 10px 5px;
   transition: all ease 0.3s;
   opacity: 0.7;
 
@@ -107,8 +106,8 @@ a.banner-search {
     padding: 10px 2px;
   }
   @media (min-width: 576px) {
-    font-size: 2.0rem;
-    padding: 10px 5px;
+    font-size: 2.4rem;
+    padding: 10px 6px;
   }
 }
 
@@ -329,7 +328,7 @@ figure.image > img,
 // Untertitel eines Bildes
 #main figure > figcaption {
   background-color: $quote-start;
-  color: $blau-stark;
+  color: #000;
   font-size: 0.9rem;
   padding: 10px 5px 5px 5px;
   border-bottom-left-radius: 5px;
@@ -435,6 +434,11 @@ blockquote {
   background: linear-gradient(90deg, $quote-start, $quote-end);
   box-shadow: 2px 2px 15px #ccc;
   border-radius: 5px;
+
+  a {
+    padding-top: 13px;
+    padding-bottom: 13px;
+  }
 }
 blockquote p {
   margin: 0;
@@ -504,8 +508,12 @@ blockquote p {
       > li,
       > li > ul > li {
         color: $blau-hover; 
-        //list-style-type: square;
         list-style-type: "» ";
+        padding: 13px 0;
+
+        a {
+          padding: 13px 3px;
+        }
       }
     }
   }
@@ -519,7 +527,7 @@ blockquote p {
 
 // Buttons
 .button {
-  color: #ddd;
+  color: #fff;
   background-color: $blau-stark;
   border: none;
   border-radius: 5px;
@@ -541,6 +549,8 @@ blockquote p {
 .button-navigation {
   background-color: $kontakt-hell;
   margin-top: -18px;
+  padding-top: 12px;
+  padding-bottom: 12px;
   color: $blau-dark;
   border: 1px #fff solid;
 }
@@ -595,6 +605,7 @@ a.button-layer > p {
 #faqpage .button-accordion a,
 #accordion .button-accordion a {
   color: #eee;
+  padding: 15px 5px;
 }
 #faqpage .button-accordion a:hover,
 #accordion .button-accordion a:hover {
@@ -645,6 +656,10 @@ footer > div.row > div.col-md-3 {
     padding-left: 0;
     li {
       list-style-type: none;
+
+      &.footer-icons {
+        float: left;
+      }
     }
   }
   img {

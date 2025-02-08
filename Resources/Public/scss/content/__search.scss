@@ -9,7 +9,7 @@
 }
 #ke_search_sword_box {
   border: 3px $blau-leicht solid;
-  height: 38px;
+  height: 44px;
   width: 100%;
   padding: 5px;
   margin: 0px;
@@ -17,15 +17,27 @@
 }
 #ke_search_sword {
   border: 3px $blau-leicht solid;
-  height: 38px;
+  height: 44px;
   width: 100%;
   padding: 5px;
   margin: 0px;
   display: block;
 }
+
+.ke_search_label {
+  border: 3px #0f0 solid;
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0;
+  border: 0;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
 .button_search {
   background: $blau-leicht;
-  height: 38px;
+  height: 44px;
   width: 100%;
   min-width: 80px;
   float: right;
@@ -52,6 +64,8 @@
   }
   .ke-top-div-button {
     width: 100%;
+    margin-top: -3px;
+    margin-left: 0;
     clear: both;
   }
 }
@@ -61,7 +75,9 @@
     float: left;
   }
   .ke-top-div-button {
-    width: 30%;
+    width: calc(30% + 3px);
+    margin-top: 0;
+    margin-left: -3px;
     float: right;
   }
 }

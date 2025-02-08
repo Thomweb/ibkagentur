@@ -58,12 +58,12 @@
 	border: 1px solid #b7d4e8;
 	background: #b7d4e8;
 	font-weight: normal;
-	color: #454545;
+	color: #000;
 }
 .ui-state-default a,
 .ui-state-default a:link,
 .ui-state-default a:visited {
-	color: #454545;
+	color: #000;
 	text-decoration: none;
 }
 .ui-state-hover,
@@ -89,14 +89,14 @@
 	box-shadow: 0 0 3px 1px rgb(94, 158, 214);
 }
 .ui-state-active {
-	border: 1px solid #275ba4;
-	background: #275ba4;
+	border: 1px solid #1f4b88;
+	background: #1f4b88;
 	font-weight: normal;
 	color: #ffffff;
 }
 .ui-icon-background,
 .ui-state-active .ui-icon-background {
-	border: #275ba4;
+	border: #1f4b88;
 	background-color: #ffffff;
 }
 .ui-state-active a,
@@ -111,14 +111,14 @@
 .ui-state-highlight {
 	border: 1px solid #b7d4e8;
 	background: #a4c2ed;
-	color: #275ba4;
+	color: #1f4b88;
 }
 .ui-state-checked {
 	border: 1px solid #b7d4e8;
 	background: #a4c2ed;
 }
 .ui-state-highlight a {
-	color: #275ba4;
+	color: #1f4b88;
 }
 .ui-state-error {
 	border: 1px solid #f1a899;

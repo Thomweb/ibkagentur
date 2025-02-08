@@ -98,6 +98,7 @@
 	display: block;
 	cursor: pointer;
 	position: relative;
+	color: #fff;
 	margin: 2px 0 0 0;
 	padding: .5em .5em .5em .7em;
 	font-size: 100%;

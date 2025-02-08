@@ -170,15 +170,19 @@ div#navbar.navbar-collapse.collapse > ul.nav.navbar-nav > li.dropdown.active > a
 span.bread_link_small,
 a.bread_link_small  {
   font-size: 14px;  
-  line-height: 40px;
-  padding: 10px 5px;
+  line-height: 44px;
+  min-width: 44px;
+  padding: 13px 5px;
   transition: all ease 0.3s;
+
+  &.bread_link_small_footer {
+    padding: 13px 13px 13px 5px;
+  }
 
   &.bread_link_img {
     font-size: 24px;
     padding: 10px;
   }
-
 }
 
 span.bread_link_small  {

@@ -70,3 +70,14 @@ tt_content.image.20.maxWInText = 2000
 ############################################################  
 
 plugin.tx_ckeditor_fontawesome.loadCSS = 0
+
+##############################################################
+### Fluid Template Für Cookie Plugin                       ###
+##############################################################
+
+plugin.tx_omcookiemanager_main {
+	view {
+		# cat=plugin.tx_omcookiemanager_main/file; type=string; label=Path to template root (FE)
+		templateRootPath = EXT:ibkagentur/Resources/Private/Cookie/Templates/
+	}
+}

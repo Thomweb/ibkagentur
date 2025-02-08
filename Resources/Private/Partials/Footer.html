@@ -1,29 +1,39 @@
 <div class="row">
   <div class="col-12 col-md-12">
-    <f:link.external
+    <ul>
+      <li class="footer-icons">
+        <f:link.external
             rel="noopener noreferrer"
             uri="https://www.facebook.com/Agentur-IBK-100221811664437/"
-            title="Agentur IBK bei Facebook"
+            title="Agentur IBK bei Facebook (opens new tab)"
             class="fab fa-facebook-square"
             target="_blank"></f:link.external>
-    <f:link.external
+      </li>
+      <li class="footer-icons">
+        <f:link.external
             rel="noopener noreferrer"
             uri="https://www.xing.com/profile/Thomas_Berscheid3/"
-            title="Thomas Berscheid bei XING"
+            title="Thomas Berscheid bei XING (opens new tab)"
             class="fab fa-xing-square"
             target="_blank"></f:link.external>
-    <f:link.external
+      </li>
+      <li class="footer-icons">
+        <f:link.external
             rel="noopener noreferrer"
             uri="https://www.linkedin.com/in/thomas-berscheid-koeln/"
-            title="Thomas Berscheid bei LinkedIn"
+            title="Thomas Berscheid bei LinkedIn (opens new tab)"
             class="fab fa-linkedin"
             target="_blank"></f:link.external>
-    <f:link.external
+      </li>
+      <li class="footer-icons">
+        <f:link.external
             rel="noopener noreferrer"
-            uri="https://www.agentur-ibk.de/feed"
-            title="RSS Feed: Blog der Agentur IBK"
+            uri="/feed"
+            title="RSS Feed: Blog der Agentur IBK (opens new tab)"
             class="fas fa-rss-square"
             target="_blank"></f:link.external>
+      </li>
+    </ul>
   </div>
 </div>
 
@@ -34,7 +44,7 @@
     <ul>
       <f:for each="{footerMenu}" as="footerMenuItem">
         <li>
-          <f:link.page pageUid="{footerMenuItem.data.uid}" title="{footerMenuItem.title}" class="bread_link_small">{footerMenuItem.data.title}</f:link.page>
+          <f:link.page pageUid="{footerMenuItem.data.uid}" title="{footerMenuItem.title}" class="bread_link_small bread_link_small_footer">{footerMenuItem.data.title}</f:link.page>
         </li>
       </f:for>
     </ul>
@@ -53,7 +63,11 @@
               height="32"
               loading="lazy"
         />
-        <a class="bread_link_small" rel="noopener noreferrer" href="https://www.agentur-ibk.de/" target="_blank" title="Agentur für TYPO3 und Wordpress Köln ✔ SEO ✔ Tutorial">Agentur IBK</a>
+        <a class="bread_link_small"
+           rel="noopener noreferrer"
+           href="https://www.agentur-ibk.de/"
+           target="_blank"
+           title="Agentur für TYPO3 und Wordpress Köln ✔ SEO ✔ Tutorial (opens new tab)">Agentur IBK</a>
       </li>
       <li>
         <img
@@ -64,7 +78,11 @@
               height="32"
               loading="lazy"
         />
-        <a class="bread_link_small" rel="noopener noreferrer" href="https://www.georgienseite.de/" target="_blank" title="Die Georgienseite: Informationen über Georgien - Land und Leute, Reisen, Reiseberichte von Thomas Berscheid. Essen und Trinken, georgische Rezepte und georgischer Wein - Powered by TYPO3">Die Georgienseite</a>
+        <a class="bread_link_small"
+           rel="noopener noreferrer"
+           href="https://www.georgienseite.de/"
+           target="_blank"
+           title="Die Georgienseite: Informationen über Georgien - Land und Leute, Reisen, Reiseberichte von Thomas Berscheid. Essen und Trinken, georgische Rezepte und georgischer Wein (opens new tab)">Die Georgienseite</a>
       </li>
       <li>
         <img
@@ -75,18 +93,26 @@
                 height="32"
                 loading="lazy"
         />
-        <a class="bread_link_small" rel="noopener noreferrer" href="https://www.berscheid-verlag.de/" target="_blank" title="Berscheid Verlag ✔ Krimis von Thomas Berscheid ✔ georgische Sprache Lernen mit Irma Berscheid-Kimeridze">Berscheid Verlag</a>
+        <a class="bread_link_small"
+           rel="noopener noreferrer"
+           href="https://www.berscheid-verlag.de/"
+           target="_blank"
+           title="Berscheid Verlag ✔ Krimis von Thomas Berscheid ✔ georgische Sprache Lernen mit Irma Berscheid-Kimeridze (opens new tab)">Berscheid Verlag</a>
       </li>
       <li>
         <img
-                title="Thomas Berscheid: Krimis und Romane des Schriftstellers"
-                alt="Thomas Berscheid: Krimis und Romane des Schriftstellers"
+                title="Thomas Berscheid: Fantasy, Krimis und Romane des Schriftstellers"
+                alt="Thomas Berscheid: Fantasy, Krimis und Romane des Schriftstellers"
                 src="typo3conf/ext/ibkagentur/Resources/Public/Icons/Footer/Thomas_Berscheid_26_512x512-32x32.webp"
                 width="32"
                 height="32"
                 loading="lazy"
         />
-        <a class="bread_link_small" rel="noopener noreferrer" href="https://www.thomweb.de" target="_blank" title="Thomas Berscheid: Krimis und Romane des Schriftstellers">Thomweb.de</a>
+        <a class="bread_link_small"
+           rel="noopener noreferrer"
+           href="https://www.thomweb.de"
+           target="_blank"
+           title="Thomas Berscheid: Krimis und Romane des Schriftstellers (opens new tab)">Thomweb.de</a>
       </li>
       <li>
         <img
@@ -97,7 +123,11 @@
                 height="32"
                 loading="lazy"
         />
-        <a class="bread_link_small" rel="noopener noreferrer" href="https://wiki.agentur-ibk.de/doku.php" target="_blank" title="Sourcen, Quellcode und Code Snippets zu TYPO3. Responsive Webseiten mit Bootstrap. TypoScript, CSS, HTML, jQuery und JavaScript von Thomas Berscheid">Wiki der Agentur</a>
+        <a class="bread_link_small"
+           rel="noopener noreferrer"
+           href="https://wiki.agentur-ibk.de/doku.php"
+           target="_blank"
+           title="Sourcen, Quellcode und Code Snippets zu TYPO3. Responsive Webseiten mit Bootstrap. TypoScript, CSS, HTML, jQuery und JavaScript (opens new tab)">Wiki der Agentur</a>
       </li>
     </ul>
   </div>
@@ -113,7 +143,11 @@
                 height="32"
                 loading="lazy"
         />
-        <a class="bread_link_small" rel="noopener noreferrer" href="https://www.georgisch.com" target="_blank" title="Georgisch Dolmetschen und georgisch Übersetzen: Übersetzerin und Dolmetscherin für die georgische Sprache in Köln und NRW: Irma Berscheid-Kimeridze - Powered by WordPress">Georgisch.Com</a>
+        <a class="bread_link_small"
+           rel="noopener noreferrer"
+           href="https://www.georgisch.com"
+           target="_blank"
+           title="Georgische Sprache - georgisches Alphabet: Irma Berscheid-Kimeridze (opens new tab)">Georgisch.Com</a>
       </li>
       <li>
         <img
@@ -124,7 +158,11 @@
                 height="32"
                 loading="lazy"
         />
-        <a class="bread_link_small" rel="noopener noreferrer" href="https://georgisch-lernen.de/" target="_blank" title="GeoLingua - Georgisch lernen • georgische Sprache • Schrift • Georgien • Georgisch-Kurs • Literatur • Alphabet - Powered by WordPress">Georgisch Lernen</a>
+        <a class="bread_link_small"
+           rel="noopener noreferrer"
+           href="https://georgisch-lernen.de/"
+           target="_blank"
+           title="GeoLingua - Georgisch lernen • georgische Sprache • Schrift • Georgien • Georgisch-Kurs • Literatur • Alphabet (opens new tab)">Georgisch Lernen</a>
       </li>
       <li>
         <img
@@ -135,7 +173,11 @@
                 height="32"
                 loading="lazy"
         />
-        <a class="bread_link_small" rel="noopener noreferrer" href="https://www.georgien.net/" target="_blank" title="Georgien.net: Tourismus in Georgien ✔ Tbilissi ✔ georgische Küche ✔ Kultur">Tourismus in Georgien</a>
+        <a class="bread_link_small"
+           rel="noopener noreferrer"
+           href="https://www.georgien.net/"
+           target="_blank"
+           title="Georgien.net: Tourismus in Georgien ✔ Tbilissi ✔ georgische Küche ✔ Kultur (opens new tab)">Tourismus in Georgien</a>
       </li>
       <li>
         <img
@@ -146,7 +188,11 @@
                 height="32"
                 loading="lazy"
         />
-        <a class="bread_link_small" rel="noopener noreferrer" href="https://www.geoweinland.de/" target="_blank" title="Weinland Georgien: Informationen und Nachrichten zu georgischem Wein">Weinland Georgien</a>
+        <a class="bread_link_small"
+           rel="noopener noreferrer"
+           href="https://www.geoweinland.de/"
+           target="_blank"
+           title="Weinland Georgien: Informationen und Nachrichten zu georgischem Wein (opens new tab)">Weinland Georgien</a>
       </li>
       <li>
         <img
@@ -157,7 +203,11 @@
                 height="32"
                 loading="lazy"
         />
-        <a class="bread_link_small" rel="noopener noreferrer" href="https://www.geokulinarium.de/" target="_blank" title="GeoKulinarium: georgische Küche und Rezepte aus Georgien">GeoKulinarium</a>
+        <a class="bread_link_small"
+           rel="noopener noreferrer"
+           href="https://www.geokulinarium.de/"
+           target="_blank"
+           title="GeoKulinarium: georgische Küche und Rezepte aus Georgien (opens new tab)">GeoKulinarium</a>
       </li>
     </ul>
   </div>
@@ -168,7 +218,7 @@
   <div class="col-12 col-md-3">
     <img src="/typo3conf/ext/ibkagentur/Resources/Public/Icons/TYPO3-Association-Bronze-Member-200x100.jpg"
          title="Agentur IBK ist Bronze Mitglied der TYPO3 Association"
-         alt="Agentur IBK ist Bronze Mitglied der TYPO3 Association"
+         alt="Agentur IBK ist Bronze Mitglied der TYPO3 Association (opens new tab)"
          loading="lazy"
          width="100"
          height="50">
@@ -178,7 +228,7 @@
     <a rel="noopener noreferrer" href="https://www.freelancermap.de/freelancer-verzeichnis/profile/entwicklung/128166-profil-thomas-berscheid-webentwickler.html" target="_blank" title="Profil von Thomas Berscheid auf www.freelancermap.de">
       <img src="/typo3conf/ext/ibkagentur/Resources/Public/Icons/findenSieMich.png"
            title="Profil von Thomas Berscheid auf www.freelancermap.de"
-           alt="Profil von Thomas Berscheid auf www.freelancermap.de"
+           alt="Profil von Thomas Berscheid auf www.freelancermap.de (opens new tab)"
            loading="lazy"
            width="160"
            height="33">
@@ -188,7 +238,7 @@
     <a rel="noopener noreferrer" href="https://www.gulp.de/gulp2/home/profil/ThomasBerscheid" title="Thomas Berscheid: Freelancer TYPO3, Wordpress und SEO" target="_blank">
       <img src="/typo3conf/ext/ibkagentur/Resources/Public/Icons/gulp_bl_160x30px_fmb_rot.jpg"
            title="Thomas Berscheid bei GULP - Freelancer für TYPO3 und Wordpress. SEO für TYPO3"
-           alt="Thomas Berscheid bei GULP - Freelancer für TYPO3 und Wordpress. SEO für TYPO3"
+           alt="Thomas Berscheid bei GULP - Freelancer für TYPO3 und Wordpress. SEO für TYPO3 (opens new tab)"
            loading="lazy"
            width="160"
            height="30" />
@@ -198,7 +248,7 @@
     <a rel="noopener noreferrer" href="https://dasauge.de/-agentur-ibk/" target="_blank">
       <img src="/typo3conf/ext/ibkagentur/Resources/Public/Icons/dasauge_de_btn_profil.webp"
            title="Internetagentur Irma Berscheid-Kimeridze bei dasauge - Webseiten mit TYPO3 und Wordpress. SEO für TYPO3"
-           alt="Internetagentur Irma Berscheid-Kimeridze bei dasauge - Webseiten mit TYPO3 und Wordpress. SEO für TYPO3"
+           alt="Internetagentur Irma Berscheid-Kimeridze bei dasauge - Webseiten mit TYPO3 und Wordpress. SEO für TYPO3 (opens new tab)"
            loading="lazy"
            width="85"
            height="23" /></a>
